@@ -4,7 +4,7 @@ const $coords = document.getElementById("coords");
 const $displayCoords = document.getElementById("displayCoords");
 const $formRecherche = document.getElementById("formRecherche");
 
-let map = L.map('mapid').setView([46.836, 4.587], 7);
+let map = L.map('mapid').setView([46.836, 4.5870], 7);
 
 /*
 L.tileLayer('https://wxs.ign.fr/essentiels/geoportail/wmts?layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&style=normal&tilematrixset=PM&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}', {

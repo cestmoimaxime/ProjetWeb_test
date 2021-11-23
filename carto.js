@@ -50,6 +50,49 @@ var message_lion=document.getElementById('message_boutton_lion');
 var message_aigle=document.getElementById('message_boutton_aigle');
 var message_blaireau=document.getElementById('message_boutton_blaireau');
 var message_serpent=document.getElementById('message_boutton_serpent');
+var valid_blaireau=document.getElementById('valider_blaireau');
+var valid_lion=document.getElementById('valider_lion');
+var valid_aigle=document.getElementById('valider_aigle');
+var valid_serpent=document.getElementById('valider_serpent');
+var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
+var sol_lion=document.getElementById('bonne_reponse_lion');
+var sol_aigle=document.getElementById('bonne_reponse_aigle');
+var sol_serpent=document.getElementById('bonne_reponse_serpent');
+
+
+valid_aigle.addEventListener("click", fonction_aigle)
+
+
+valid_lion.addEventListener("click", fonction_lion)
+
+valid_blaireau.addEventListener("click", fonction_blaireau)
+
+valid_serpent.addEventListener("click", fonction_serpent)
+
+function fonction_aigle(){
+    if (sol_aigle.checked){
+        console.log('Bravo')
+    }
+}
+
+
+function fonction_lion(){
+    if (sol_lion.checked){
+        console.log('Bravo')
+    }
+
+
+}function fonction_blaireau(){
+    if (sol_blaireau.checked){
+        console.log('Bravo')
+    }
+
+
+}function fonction_serpent(){
+    if (sol_serpent.checked){
+        console.log('Bravo')
+    }
+}
 
 
 

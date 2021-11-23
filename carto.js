@@ -50,8 +50,17 @@ var image1 = L.icon({
 });
 /*L.marker([37.7508,14.9944], {icon:image1}).addTo(map).bindPopup('Enigme du blaireau');*/
 
+//document.getElementById('message_button').style.display = 'block';
+var message_blaireau=document.getElementById('message_button');
+
+//message_button.style.display = 'none';
+//$(".messagebutton").hide();
+
 var blaireau = L.marker([37.7508,14.9944], {icon: image1, draggable:true });
-blaireau.bindPopup('Enigme du blaireau'+blaireau.getLatLng());
+blaireau.bindPopup(message_blaireau, {
+    maxWidth: "auto"
+  });
+
 var shelterMarkers = new L.FeatureGroup();
 shelterMarkers.addLayer(blaireau);
 

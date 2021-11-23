@@ -42,29 +42,31 @@ map.on('mousemove', leafletEvent => {
 }).addTo(map);*/
 
 
-var image1 = L.icon({
-  iconUrl:'poufsouffle_blaireau.jpg',
-  iconSize:[32,37],
-  iconAnchor:[16,37],
-  popupAnchor:[-3,-76]
-});
+
 /*L.marker([37.7508,14.9944], {icon:image1}).addTo(map).bindPopup('Enigme du blaireau');*/
 
 //document.getElementById('message_button').style.display = 'block';
-var message_blaireau=document.getElementById('message_button');
-console.log(message_blaireau);
+var message_lion=document.getElementById('message_boutton_lion');
+var message_aigle=document.getElementById('message_boutton_aigle');
+var message_blaireau=document.getElementById('message_boutton_blaireau');
+var message_serpent=document.getElementById('message_boutton_serpent');
+
+
+
 //message_button.style.display = 'none';
 //$(".messagebutton").hide();
+var image1 = L.icon({
+    iconUrl:'poufsouffle_blaireau.jpg',
+    iconSize:[32,37],
+    iconAnchor:[16,37],
+    popupAnchor:[-3,-76]
+  });
 
-var blaireau = L.marker([37.7508,14.9944], {icon: image1, draggable:true });
+var blaireau = L.marker([37.7508,14.9944], {icon: image1});
 blaireau.bindPopup(message_blaireau);
 
 var shelterMarkers = new L.FeatureGroup();
 shelterMarkers.addLayer(blaireau);
-
-
-
-
 
 var image2 = L.icon({
   iconUrl:'serpentard_serpent.jpg',
@@ -74,11 +76,9 @@ var image2 = L.icon({
 });
 /*L.marker([43.8853,-110.5777], {icon:image2}).addTo(map).bindPopup('Enigme du serpent');*/
 
-var serpent = L.marker([43.8853,-110.5777], {icon: image2}).bindPopup('Enigme du serpent');
+var serpent = L.marker([43.8853,-110.5777], {icon: image2})
+serpent.bindPopup(message_serpent);
 shelterMarkers.addLayer(serpent);
-
-
-
 
 var image3 = L.icon({
   iconUrl:'serdaigle_aigle.jpg',
@@ -88,10 +88,9 @@ var image3 = L.icon({
 });
 /*L.marker([46.8906,-0.9289], {icon:image3}).addTo(map).bindPopup('Enigme de l aigle');*/
 
-var aigle = L.marker([46.8906,-0.9289], {icon: image3}).bindPopup('Enigme de l aigle');
+var aigle = L.marker([46.8906,-0.9289], {icon: image3})
+aigle.bindPopup(message_aigle);
 shelterMarkers.addLayer(aigle);
-
-
 
 
 
@@ -103,7 +102,8 @@ var image4 = L.icon({
 });
 /*L.marker([37.8070,22.7066], {icon:image4}).addTo(map).bindPopup('Enigme du lion');*/
 
-var lion = L.marker([37.8070,22.7066], {icon: image4}).bindPopup('Enigme du lion');
+var lion = L.marker([37.8070,22.7066], {icon: image4})
+lion.bindPopup(message_lion);
 shelterMarkers.addLayer(lion);
 
 

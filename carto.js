@@ -52,14 +52,12 @@ var image1 = L.icon({
 
 //document.getElementById('message_button').style.display = 'block';
 var message_blaireau=document.getElementById('message_button');
-
+console.log(message_blaireau);
 //message_button.style.display = 'none';
 //$(".messagebutton").hide();
 
 var blaireau = L.marker([37.7508,14.9944], {icon: image1, draggable:true });
-blaireau.bindPopup(message_blaireau, {
-    maxWidth: "auto"
-  });
+blaireau.bindPopup(message_blaireau);
 
 var shelterMarkers = new L.FeatureGroup();
 shelterMarkers.addLayer(blaireau);
@@ -134,7 +132,7 @@ map.on('zoomend', function() {
 
 
 const markerGroup = L.featureGroup().addTo(map);
-
+/*
 $displayCoords.addEventListener('change', () => {
     if ($displayCoords.checked) {
         $coords.style.display = 'unset';
@@ -160,3 +158,4 @@ $formRecherche.addEventListener('submit', (event) => {
         map.fitBounds(markerGroup.getBounds())
     });
 });
+*/

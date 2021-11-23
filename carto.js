@@ -94,10 +94,8 @@ var image1 = L.icon({
     iconAnchor:[16,37],
     popupAnchor:[-3,-76]
   });
-
 var blaireau = L.marker([37.7508,14.9944], {icon: image1});
 blaireau.bindPopup(message_blaireau);
-
 var shelterMarkers = new L.FeatureGroup();
 shelterMarkers.addLayer(blaireau);
 
@@ -107,8 +105,6 @@ var image2 = L.icon({
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
 });
-/*L.marker([43.8853,-110.5777], {icon:image2}).addTo(map).bindPopup('Enigme du serpent');*/
-
 var serpent = L.marker([43.8853,-110.5777], {icon: image2})
 serpent.bindPopup(message_serpent);
 shelterMarkers.addLayer(serpent);
@@ -119,12 +115,9 @@ var image3 = L.icon({
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
 });
-/*L.marker([46.8906,-0.9289], {icon:image3}).addTo(map).bindPopup('Enigme de l aigle');*/
-
 var aigle = L.marker([46.8906,-0.9289], {icon: image3})
 aigle.bindPopup(message_aigle);
 shelterMarkers.addLayer(aigle);
-
 
 
 var image4 = L.icon({
@@ -133,8 +126,6 @@ var image4 = L.icon({
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
 });
-/*L.marker([37.8070,22.7066], {icon:image4}).addTo(map).bindPopup('Enigme du lion');*/
-
 var lion = L.marker([37.8070,22.7066], {icon: image4})
 lion.bindPopup(message_lion);
 shelterMarkers.addLayer(lion);
@@ -146,7 +137,6 @@ var image5 = L.icon({
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
 });
-/*L.marker([51.53319,-0.12418], {icon:image5}).addTo(map).bindPopup('Question de Hagrid');*/
 
 var image6 = L.icon({
     iconUrl:'boutefeu_chinois.jpg',
@@ -154,7 +144,6 @@ var image6 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var dragon_chinois=L.marker([23.990,121.013], {icon:image6})
 shelterMarkers.addLayer(dragon_chinois)
 
@@ -164,7 +153,6 @@ var image7 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var ecole_russe=L.marker([59.008,59.139], {icon:image7})
 shelterMarkers.addLayer(ecole_russe)
 
@@ -174,10 +162,8 @@ var image8 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var prison=L.marker([59.745,1.600], {icon:image8})
 shelterMarkers.addLayer(prison)
-
 
 var image9 = L.icon({
     iconUrl:'aragog.jpg',
@@ -185,10 +171,8 @@ var image9 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var aragog=L.marker([-25.231,134.235], {icon:image9})
 shelterMarkers.addLayer(aragog)
-
 
 var image10 = L.icon({
     iconUrl:'beauxbatons.jpg',
@@ -196,10 +180,8 @@ var image10 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var beauxbatons=L.marker([47.0134,3.3393], {icon:image10})
 shelterMarkers.addLayer(beauxbatons)
-
 
 var image11 = L.icon({
     iconUrl:'magyar_a_pointe.jpg',
@@ -207,11 +189,8 @@ var image11 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var dragon_hongrie=L.marker([47.0068,18.1659], {icon:image11})
 shelterMarkers.addLayer(dragon_hongrie)
-
-
 
 var image12 = L.icon({
     iconUrl:'vert_gallois.jpg',
@@ -219,11 +198,8 @@ var image12 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var dragon_galles=L.marker([52.3852,-3.6966], {icon:image12})
 shelterMarkers.addLayer(dragon_galles)
-
-
 
 var image13 = L.icon({
     iconUrl:'suedois_a_museau_court.jpg',
@@ -231,10 +207,8 @@ var image13 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var dragon_suede=L.marker([59.872,17.631], {icon:image13})
 shelterMarkers.addLayer(dragon_suede)
-
 
 var image14 = L.icon({
     iconUrl:'chaumiere_aux_coquillages.jpg',
@@ -242,7 +216,6 @@ var image14 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var maison=L.marker([50.1027, -5.3892], {icon:image14})
 shelterMarkers.addLayer(maison)
 
@@ -252,12 +225,8 @@ var image15 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
-
 var poudlard=L.marker([56.9745, -4.4125], {icon:image15})
 shelterMarkers.addLayer(poudlard)
-
-
-
 
 
 var hagrid = L.marker([51.53319,-0.12418], {icon: image5}).bindPopup('Question de Hagrid');

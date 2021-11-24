@@ -73,7 +73,7 @@ valid_blaireau.addEventListener("click", fonction_blaireau);
 valid_serpent.addEventListener("click", fonction_serpent);
 
 //message_lion.style.display = 'block';
-
+console.log('coucou')
 
 function fonction_aigle(){
     if (sol_aigle.checked){

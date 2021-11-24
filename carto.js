@@ -45,7 +45,7 @@ var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
 var sol_lion=document.getElementById('bonne_reponse_lion');
 var sol_aigle=document.getElementById('bonne_reponse_aigle');
 var sol_serpent=document.getElementById('bonne_reponse_serpent');
-var mdp=document.getElementById('mot_de_passe');
+var $mdp=document.getElementById('mot_de_passe');
 
 
 var message_vert_gallois=document.getElementById('message_boutton_vert_gallois');
@@ -66,15 +66,16 @@ var sol_magyar=document.getElementById('bonne_reponse_magyar');
 var sol_boutefeu=document.getElementById('bonne_reponse_boutefeu');
 var sol_aragog=document.getElementById('bonne_reponse_aragog');
 
-
-valid_aigle.addEventListener("click", fonction_aigle)
-valid_lion.addEventListener("click", fonction_lion)
-valid_blaireau.addEventListener("click", fonction_blaireau)
-valid_serpent.addEventListener("click", fonction_serpent)
+console.log($mdp);
+valid_aigle.addEventListener("click", fonction_aigle);
+valid_lion.addEventListener("click", fonction_lion);
+valid_blaireau.addEventListener("click", fonction_blaireau);
+valid_serpent.addEventListener("click", fonction_serpent);
 
 function fonction_aigle(){
     if (sol_aigle.checked){
-      console.log('Bravo')
+      console.log('Bravo');
+      $mdp.innerHTML='vo';
     }
 }
 
@@ -90,11 +91,11 @@ function fonction_lion(){
 }
 
 
-valid_vert_gallois.addEventListener("click", fonction_vert_gallois)
-valid_suedois.addEventListener("click", fonction_suedois)
-valid_magyar.addEventListener("click", fonction_magyar)
-valid_boutefeu.addEventListener("click", fonction_boutefeu)
-valid_aragog.addEventListener("click", fonction_aragog)
+valid_vert_gallois.addEventListener("click", fonction_vert_gallois);
+valid_suedois.addEventListener("click", fonction_suedois);
+valid_magyar.addEventListener("click", fonction_magyar);
+valid_boutefeu.addEventListener("click", fonction_boutefeu);
+valid_aragog.addEventListener("click", fonction_aragog);
 
 function fonction_vert_gallois(){
     if (sol_vert_gallois.checked){

@@ -81,12 +81,15 @@ function fonction_aigle(){
 
 function fonction_lion(){
     if (sol_lion.checked){
+      $mdp.innerHTML+='ld';
     }
 }function fonction_blaireau(){
     if (sol_blaireau.checked){
+      $mdp.innerHTML+='em';
     }
 }function fonction_serpent(){
     if (sol_serpent.checked){
+      $mdp.innerHTML+='ort';
     }
 }
 

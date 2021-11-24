@@ -289,5 +289,7 @@ form input {
 }
 
 #mot_de_passe{
+    font-family: Arial;
     font-size: xx-large;
+    background-color: #6820D9;
 }

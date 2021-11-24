@@ -1,4 +1,4 @@
-'use strict';
+
 
 const $coords = document.getElementById("coords");
 const $displayCoords = document.getElementById("displayCoords");
@@ -72,22 +72,26 @@ valid_lion.addEventListener("click", fonction_lion);
 valid_blaireau.addEventListener("click", fonction_blaireau);
 valid_serpent.addEventListener("click", fonction_serpent);
 
+//message_lion.style.display = 'block';
+
+
 function fonction_aigle(){
     if (sol_aigle.checked){
-      console.log('Bravo');
+      console.log('Bravo')
       $mdp.innerHTML='vo';
     }
 }
-
 function fonction_lion(){
     if (sol_lion.checked){
       $mdp.innerHTML+='ld';
     }
-}function fonction_blaireau(){
+}
+function fonction_blaireau(){
     if (sol_blaireau.checked){
       $mdp.innerHTML+='em';
     }
-}function fonction_serpent(){
+}
+function fonction_serpent(){
     if (sol_serpent.checked){
       $mdp.innerHTML+='ort';
     }
@@ -126,7 +130,6 @@ function fonction_aragog(){
 
 
 
-//message_button.style.display = 'none';
 
 //$(".messagebutton").hide();
 var image1 = L.icon({

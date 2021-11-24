@@ -6,18 +6,9 @@ const $formRecherche = document.getElementById("formRecherche");
 
 let map = L.map('mapid').setView([46.836, 4.5870], 7);
 
-/*
-L.tileLayer('https://wxs.ign.fr/essentiels/geoportail/wmts?layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&style=normal&tilematrixset=PM&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}', {
-    attribution: 'Données cartographiques : © IGN',
-    maxZoom: 19,
-}).addTo(map);
-*/
-
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
-
 
 
 
@@ -41,15 +32,11 @@ map.on('mousemove', leafletEvent => {
     radius: 500
 }).addTo(map);*/
 
-
-
-/*L.marker([37.7508,14.9944], {icon:image1}).addTo(map).bindPopup('Enigme du blaireau');*/
-
 //document.getElementById('message_button').style.display = 'block';
-var message_lion=document.getElementById('message_boutton_lion');
-var message_aigle=document.getElementById('message_boutton_aigle');
-var message_blaireau=document.getElementById('message_boutton_blaireau');
-var message_serpent=document.getElementById('message_boutton_serpent');
+let message_lion=document.getElementById('message_boutton_lion');
+let message_aigle=document.getElementById('message_boutton_aigle');
+let message_blaireau=document.getElementById('message_boutton_blaireau');
+let message_serpent=document.getElementById('message_boutton_serpent');
 var valid_blaireau=document.getElementById('valider_blaireau');
 var valid_lion=document.getElementById('valider_lion');
 var valid_aigle=document.getElementById('valider_aigle');
@@ -58,6 +45,8 @@ var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
 var sol_lion=document.getElementById('bonne_reponse_lion');
 var sol_aigle=document.getElementById('bonne_reponse_aigle');
 var sol_serpent=document.getElementById('bonne_reponse_serpent');
+var mdp=document.getElementById('mot_de_passe');
+
 
 var message_vert_gallois=document.getElementById('message_boutton_vert_gallois');
 var message_suedois=document.getElementById('message_boutton_suedois');
@@ -85,22 +74,21 @@ valid_serpent.addEventListener("click", fonction_serpent)
 
 function fonction_aigle(){
     if (sol_aigle.checked){
-        console.log('Bravo')
+      console.log('Bravo')
     }
 }
+
 function fonction_lion(){
     if (sol_lion.checked){
-        console.log('Bravo')
     }
 }function fonction_blaireau(){
     if (sol_blaireau.checked){
-        console.log('Bravo')
     }
 }function fonction_serpent(){
     if (sol_serpent.checked){
-        console.log('Bravo')
     }
 }
+
 
 valid_vert_gallois.addEventListener("click", fonction_vert_gallois)
 valid_suedois.addEventListener("click", fonction_suedois)
@@ -126,7 +114,7 @@ function fonction_suedois(){
         console.log('Bravo')
     }
 }
-}function fonction_aragog(){
+function fonction_aragog(){
   if (sol_aragog.checked){
       console.log('Bravo')
   }
@@ -135,6 +123,7 @@ function fonction_suedois(){
 
 
 //message_button.style.display = 'none';
+
 //$(".messagebutton").hide();
 var image1 = L.icon({
     iconUrl:'poufsouffle_blaireau.jpg',
@@ -142,7 +131,7 @@ var image1 = L.icon({
     iconAnchor:[16,37],
     popupAnchor:[-3,-76]
   });
-var blaireau = L.marker([37.7508,14.9944], {icon: image1});
+var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
 blaireau.bindPopup(message_blaireau);
 var shelterMarkers = new L.FeatureGroup();
 shelterMarkers.addLayer(blaireau);

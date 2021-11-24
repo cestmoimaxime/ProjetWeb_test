@@ -59,6 +59,24 @@ var sol_lion=document.getElementById('bonne_reponse_lion');
 var sol_aigle=document.getElementById('bonne_reponse_aigle');
 var sol_serpent=document.getElementById('bonne_reponse_serpent');
 
+var message_vert_gallois=document.getElementById('message_boutton_vert_gallois');
+var message_suedois=document.getElementById('message_boutton_suedois');
+var message_magyar=document.getElementById('message_boutton_magyar');
+var message_boutefeu=document.getElementById('message_boutton_boutefeu');
+var message_aragog=document.getElementById('message_boutton_aragog');
+
+var valid_vert_gallois=document.getElementById('valider_vert_gallois');
+var valid_suedois=document.getElementById('valider_suedois');
+var valid_magyar=document.getElementById('valider_magyar');
+var valid_boutefeu=document.getElementById('valider_boutefeu');
+var valid_aragog=document.getElementById('valider_aragog');
+
+var sol_vert_gallois=document.getElementById('bonne_reponse_vert_gallois');
+var sol_suedois=document.getElementById('bonne_reponse_suedois');
+var sol_magyar=document.getElementById('bonne_reponse_magyar');
+var sol_boutefeu=document.getElementById('bonne_reponse_boutefeu');
+var sol_aragog=document.getElementById('bonne_reponse_aragog');
+
 
 valid_aigle.addEventListener("click", fonction_aigle)
 valid_lion.addEventListener("click", fonction_lion)
@@ -82,6 +100,36 @@ function fonction_lion(){
     if (sol_serpent.checked){
         console.log('Bravo')
     }
+}
+
+valid_vert_gallois.addEventListener("click", fonction_vert_gallois)
+valid_suedois.addEventListener("click", fonction_suedois)
+valid_magyar.addEventListener("click", fonction_magyar)
+valid_boutefeu.addEventListener("click", fonction_boutefeu)
+valid_aragog.addEventListener("click", fonction_aragog)
+
+function fonction_vert_gallois(){
+    if (sol_vert_gallois.checked){
+        console.log('Bravo')
+    }
+}
+function fonction_suedois(){
+    if (sol_suedois.checked){
+        console.log('Bravo')
+    }
+}function fonction_magyar(){
+    if (sol_magyar.checked){
+        console.log('Bravo')
+    }
+}function fonction_boutefeu(){
+    if (sol_boutefeu.checked){
+        console.log('Bravo')
+    }
+}
+}function fonction_aragog(){
+  if (sol_aragog.checked){
+      console.log('Bravo')
+  }
 }
 
 

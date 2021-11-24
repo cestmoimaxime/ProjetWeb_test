@@ -6,18 +6,9 @@ const $formRecherche = document.getElementById("formRecherche");
 
 let map = L.map('mapid').setView([46.836, 4.5870], 7);
 
-/*
-L.tileLayer('https://wxs.ign.fr/essentiels/geoportail/wmts?layer=GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2&style=normal&tilematrixset=PM&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TileMatrix={z}&TileCol={x}&TileRow={y}', {
-    attribution: 'Données cartographiques : © IGN',
-    maxZoom: 19,
-}).addTo(map);
-*/
-
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
-
 
 
 
@@ -41,10 +32,6 @@ map.on('mousemove', leafletEvent => {
     radius: 500
 }).addTo(map);*/
 
-
-
-/*L.marker([37.7508,14.9944], {icon:image1}).addTo(map).bindPopup('Enigme du blaireau');*/
-
 //document.getElementById('message_button').style.display = 'block';
 let message_lion=document.getElementById('message_boutton_lion');
 let message_aigle=document.getElementById('message_boutton_aigle');
@@ -58,31 +45,28 @@ var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
 var sol_lion=document.getElementById('bonne_reponse_lion');
 var sol_aigle=document.getElementById('bonne_reponse_aigle');
 var sol_serpent=document.getElementById('bonne_reponse_serpent');
-var $mdp=document.getElementById('mot_de_passe')
+var mdp=document.getElementById('mot_de_passe');
 
-
-valid_aigle.addEventListener("click", fonction_aigle) ;
-valid_lion.addEventListener("click", fonction_lion) ;
-valid_blaireau.addEventListener("click", fonction_blaireau) ;
-valid_serpent.addEventListener("click", fonction_serpent) ;
+console.log('message_blaireau');
+valid_aigle.addEventListener("click", fonction_aigle) 
+valid_lion.addEventListener("click", fonction_lion) 
+valid_blaireau.addEventListener("click", fonction_blaireau) 
+valid_serpent.addEventListener("click", fonction_serpent) 
 
 function fonction_aigle(){
     if (sol_aigle.checked){
-        $mdp.innerHTML='vo'
-
+      console.log('Bravo')
     }
 }
+
 function fonction_lion(){
     if (sol_lion.checked){
-      $mdp.innerHTML='ld'
     }
 }function fonction_blaireau(){
     if (sol_blaireau.checked){
-      $mdp.innerHTML='em'
     }
 }function fonction_serpent(){
     if (sol_serpent.checked){
-      $mdp.innerHTML='ort'
     }
 }
 

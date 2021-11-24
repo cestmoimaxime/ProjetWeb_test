@@ -72,7 +72,17 @@ valid_lion.addEventListener("click", fonction_lion);
 valid_blaireau.addEventListener("click", fonction_blaireau);
 valid_serpent.addEventListener("click", fonction_serpent);
 
-//message_lion.style.display = 'block';
+/*
+message_vert_gallois.style.display = 'none';
+message_magyar.style.display = 'none';
+message_suedois.style.display = 'none';
+message_boutefeu.style.display = 'none';
+message_aragog.style.display = 'none';
+message_lion.style.display = 'none';
+message_serpent.style.display = 'none';
+message_aigle.style.display = 'none';
+message_blaireau.style.display = 'block';
+*/
 console.log('coucou')
 
 function fonction_aigle(){
@@ -189,6 +199,7 @@ var image6 = L.icon({
     popupAnchor:[-3,-76]
   });
 var dragon_chinois=L.marker([23.990,121.013], {icon:image6})
+dragon_chinois.bindPopup(message_boutefeu)
 shelterMarkers.addLayer(dragon_chinois)
 
 var image7 = L.icon({
@@ -216,6 +227,7 @@ var image9 = L.icon({
     popupAnchor:[-3,-76]
   });
 var aragog=L.marker([-25.231,134.235], {icon:image9})
+aragog.bindPopup(message_aragog)
 shelterMarkers.addLayer(aragog)
 
 var image10 = L.icon({
@@ -234,6 +246,7 @@ var image11 = L.icon({
     popupAnchor:[-3,-76]
   });
 var dragon_hongrie=L.marker([47.0068,18.1659], {icon:image11})
+dragon_hongrie.bindPopup(message_magyar)
 shelterMarkers.addLayer(dragon_hongrie)
 
 var image12 = L.icon({
@@ -243,6 +256,7 @@ var image12 = L.icon({
     popupAnchor:[-3,-76]
   });
 var dragon_galles=L.marker([52.3852,-3.6966], {icon:image12})
+dragon_galles.bindPopup(message_vert_gallois)
 shelterMarkers.addLayer(dragon_galles)
 
 var image13 = L.icon({
@@ -252,6 +266,7 @@ var image13 = L.icon({
     popupAnchor:[-3,-76]
   });
 var dragon_suede=L.marker([59.872,17.631], {icon:image13})
+dragon_suede.bindPopup(message_suedois)
 shelterMarkers.addLayer(dragon_suede)
 
 var image14 = L.icon({

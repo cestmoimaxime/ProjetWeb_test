@@ -45,7 +45,6 @@ var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
 var sol_lion=document.getElementById('bonne_reponse_lion');
 var sol_aigle=document.getElementById('bonne_reponse_aigle');
 var sol_serpent=document.getElementById('bonne_reponse_serpent');
-var $mdp=document.getElementById('mot_de_passe');
 
 
 var message_vert_gallois=document.getElementById('message_boutton_vert_gallois');
@@ -62,6 +61,7 @@ var sol_aragog=document.getElementById('bonne_reponse_aragog');
 
 
 
+var $mdp=document.getElementById('mot_de_passe');
 
 //console.log('coucou')
 /*
@@ -222,6 +222,7 @@ var messagearagog= '<div id="message_boutton_aragog">\
       Valider la réponse\
     </button>\
   </div>';
+  
   var image1 = L.icon({
     iconUrl:'poufsouffle_blaireau.jpg',
     iconSize:[32,37],
@@ -309,8 +310,28 @@ var image9 = L.icon({
     popupAnchor:[-3,-76]
   });
 var aragog=L.marker([-25.231,134.235], {icon:image9})
-aragog.bindPopup(messagearagog)
+aragog.bindPopup('<div id="message_boutton_aragog">\
+<h1>Un épouvantard surgit devant toi ! Comment te protèges-tu ?</h1>\
+<label>Accio<input type="radio" name="news" value="0"></label>\
+<label>Expelliarmus<input type="radio" name="news" value="0"></label>\
+<label>Stupefix<input type="radio" name="news" value="0"></label>\
+<label>Riddikulus<input id="bonne_reponse_aragog" type="radio" name="news" value="1"></label>\
+<button id="valider_aragog" type="button">\
+  Valider la réponse\
+</button>\
+</div>')
 shelterMarkers.addLayer(aragog)
+
+
+let time = document.getElementById('time');
+
+setInterval( () => {
+    let heure = new Date().toLocaleTimeString('fr');
+    time.innerHTML = heure;
+}, 1000);
+
+
+
 
 var image10 = L.icon({
     iconUrl:'beauxbatons.jpg',

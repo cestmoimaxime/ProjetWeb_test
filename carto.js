@@ -145,7 +145,8 @@ var image2 = L.icon({
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
 });
-var message_a_la_con= '<div id="message_boutton_serpent">\
+
+var messageserpent= '<div id="message_boutton_serpent">\
 <h1>Quel est le parc national américain le plus visité ?</h1>\
 <label>Great Smoky Mountains<input id="bonne_reponse_serpent" type="radio" name="news" value="1"></label>\
 <label>Everglades<input type="radio" name="news" value="0"></label>\
@@ -155,9 +156,31 @@ var message_a_la_con= '<div id="message_boutton_serpent">\
   Valider la réponse\
 </button>\
 </div> ';
+
+var messageaigle= '<div id="message_boutton_aigle">\
+<h1>Quel évènement important s’est produit l’année de la création du Puy du Fou ?</h1>\
+<label>Le renouvellement des accords bilatéraux Andorre-Moldavie<input type="radio" name="news" value="0"></label>\
+<label>Abolition de la peine de mort<input type="radio" name="news" value="0"></label>\
+<label>La chute du mur de Berlin<input id = "bonne_reponse_aigle" type="radio" name="news" value="1"></label>\
+<label>La création du Puy du Fou<input type="radio" name="news" value="0"></label>\
+<button id="valider_aigle" type="button">\
+  Valider la réponse\
+  </button>\
+</div>';
+
+var messagelion= '<div id="message_boutton_lion">\
+<h1>Quel animal ne constitue pas une épreuve des 12 travaux d’Héraklès ?</h1>\
+<label>Le sanglier<input type="radio" name="news" value="0"></label>\
+<label>La biche<input type="radio" name="news" value="0"></label>\
+<label>L ours<input id="bonne_reponse_lion" type="radio" name="news" value="1"></label>\
+<label>La jument<input type="radio" name="news" value="0"></label>\
+<button id="valider_lion" type="button">\
+  Valider la réponse\
+</button>\
+</div>';
+
 var serpent = L.marker([43.8853,-110.5777], {icon: image2})
-serpent.bindPopup(message_a_la_con
-);
+serpent.bindPopup(messageserpent);
 shelterMarkers.addLayer(serpent);
 
 var image3 = L.icon({
@@ -167,7 +190,7 @@ var image3 = L.icon({
   popupAnchor:[-3,-76]
 });
 var aigle = L.marker([46.8906,-0.9289], {icon: image3})
-aigle.bindPopup(message_aigle);
+aigle.bindPopup(messageaigle);
 shelterMarkers.addLayer(aigle);
 
 
@@ -178,7 +201,7 @@ var image4 = L.icon({
   popupAnchor:[-3,-76]
 });
 var lion = L.marker([37.8070,22.7066], {icon: image4})
-lion.bindPopup(message_lion);
+lion.bindPopup(messagelion);
 shelterMarkers.addLayer(lion);
 
 

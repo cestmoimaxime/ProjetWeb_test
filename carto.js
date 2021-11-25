@@ -275,7 +275,7 @@ var image6 = L.icon({
     popupAnchor:[-3,-76]
   });
 var dragon_chinois=L.marker([23.990,121.013], {icon:image6})
-dragon_chinois.bindPopup(message_boutefeu)
+dragon_chinois.bindPopup(messageboutefeu)
 shelterMarkers.addLayer(dragon_chinois)
 
 var image7 = L.icon({
@@ -303,7 +303,7 @@ var image9 = L.icon({
     popupAnchor:[-3,-76]
   });
 var aragog=L.marker([-25.231,134.235], {icon:image9})
-aragog.bindPopup(message_aragog)
+aragog.bindPopup(messagearagog)
 shelterMarkers.addLayer(aragog)
 
 var image10 = L.icon({
@@ -322,7 +322,7 @@ var image11 = L.icon({
     popupAnchor:[-3,-76]
   });
 var dragon_hongrie=L.marker([47.0068,18.1659], {icon:image11})
-dragon_hongrie.bindPopup(message_magyar)
+dragon_hongrie.bindPopup(messagemagyar)
 shelterMarkers.addLayer(dragon_hongrie)
 
 var image12 = L.icon({
@@ -332,7 +332,7 @@ var image12 = L.icon({
     popupAnchor:[-3,-76]
   });
 var dragon_galles=L.marker([52.3852,-3.6966], {icon:image12})
-dragon_galles.bindPopup(message_vert_gallois)
+dragon_galles.bindPopup(messagevertgallois)
 shelterMarkers.addLayer(dragon_galles)
 
 var image13 = L.icon({
@@ -342,7 +342,7 @@ var image13 = L.icon({
     popupAnchor:[-3,-76]
   });
 var dragon_suede=L.marker([59.872,17.631], {icon:image13})
-dragon_suede.bindPopup(message_suedois)
+dragon_suede.bindPopup(messagesuedois)
 shelterMarkers.addLayer(dragon_suede)
 
 var image14 = L.icon({

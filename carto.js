@@ -68,7 +68,7 @@ var sol_aragog=document.getElementById('bonne_reponse_aragog');
 
 
 
-/*
+
 message_vert_gallois.style.display = 'none';
 message_magyar.style.display = 'none';
 message_suedois.style.display = 'none';
@@ -78,7 +78,7 @@ message_lion.style.display = 'none';
 message_serpent.style.display = 'none';
 message_aigle.style.display = 'none';
 message_blaireau.style.display = 'block';
-*/
+
 //console.log('coucou')
 
 function fonction_aigle(){
@@ -155,7 +155,8 @@ var image2 = L.icon({
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
 });
-var message_a_la_con= <div id='message_boutton_serpent'>
+var serpent = L.marker([43.8853,-110.5777], {icon: image2})
+serpent.bindPopup(<div id='message_boutton_serpent'>
 <h1>Quel est le parc national américain le plus visité ?</h1>
 <label>Great Smoky Mountains<input id='bonne_reponse_serpent' type="radio" name="news" value="1"></label>
 <label>Everglades<input type="radio" name="news" value="0"></label>
@@ -165,8 +166,6 @@ var message_a_la_con= <div id='message_boutton_serpent'>
   Valider la réponse
 </button>
 </div>
-var serpent = L.marker([43.8853,-110.5777], {icon: image2})
-serpent.bindPopup(message_a_la_con
 );
 shelterMarkers.addLayer(serpent);
 

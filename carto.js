@@ -323,11 +323,11 @@ aragog.bindPopup('<div id="message_boutton_aragog">\
 shelterMarkers.addLayer(aragog)
 
 
-let time = document.getElementById('time');
+let $time = document.getElementById('time');
 
 setInterval( () => {
     let heure = new Date().toLocaleTimeString('fr');
-    time.innerHTML = heure;
+    $time.innerHTML = heure;
 }, 1000);
 
 

@@ -19,6 +19,6 @@
     <div id="content">
         <p id="texte1">Bienvenu dans cet Escape Game Harry Potter ! Cette page devra évoluer par la suite, mais pour le moment, nous nous contenterons de cette présentation (oups).</p>
     </div>
-    <div id="time">   </div>
+    
 </body>
 </html>

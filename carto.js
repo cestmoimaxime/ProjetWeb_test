@@ -36,7 +36,7 @@ map.on('mousemove', leafletEvent => {
 let message_lion=document.getElementById('message_boutton_lion');
 let message_aigle=document.getElementById('message_boutton_aigle');
 let message_blaireau=document.getElementById('message_boutton_blaireau');
-let message_serpent=document.getElementById('message_boutton_serpent');
+//let message_serpent=document.getElementById('message_boutton_serpent');
 var valid_blaireau=document.getElementById('valider_blaireau');
 var valid_lion=document.getElementById('valider_lion');
 var valid_aigle=document.getElementById('valider_aigle');
@@ -70,6 +70,7 @@ var sol_aragog=document.getElementById('bonne_reponse_aragog');
 valid_aigle.addEventListener("click", fonction_aigle);
 valid_lion.addEventListener("click", fonction_lion);
 valid_blaireau.addEventListener("click", fonction_blaireau);
+
 valid_serpent.addEventListener("click", fonction_serpent);
 
 /*
@@ -160,7 +161,17 @@ var image2 = L.icon({
   popupAnchor:[-3,-76]
 });
 var serpent = L.marker([43.8853,-110.5777], {icon: image2})
-serpent.bindPopup(message_serpent);
+serpent.bindPopup(<div id='message_boutton_serpent'>
+<h1>Quel est le parc national américain le plus visité ?</h1>
+<label>Great Smoky Mountains<input id='bonne_reponse_serpent' type="radio" name="news" value="1"></label>
+<label>Everglades<input type="radio" name="news" value="0"></label>
+<label>Grand Canyon<input type="radio" name="news" value="0"></label>
+<label>Yellowstone<input type="radio" name="news" value="0"></label>
+<button id='valider_serpent' type="button">
+  Valider la réponse
+</button>
+</div>
+);
 shelterMarkers.addLayer(serpent);
 
 var image3 = L.icon({

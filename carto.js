@@ -68,7 +68,7 @@ var sol_aragog=document.getElementById('bonne_reponse_aragog');
 
 
 
-/*
+
 message_vert_gallois.style.display = 'none';
 message_magyar.style.display = 'none';
 message_suedois.style.display = 'none';
@@ -78,7 +78,7 @@ message_lion.style.display = 'none';
 message_serpent.style.display = 'none';
 message_aigle.style.display = 'none';
 message_blaireau.style.display = 'block';
-*/
+
 //console.log('coucou')
 
 function fonction_aigle(){

@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
 
 
-=======
->>>>>>> Stashed changes
 const $coords = document.getElementById("coords");
 const $displayCoords = document.getElementById("displayCoords");
 const $formRecherche = document.getElementById("formRecherche");
@@ -74,7 +71,7 @@ valid_aigle.addEventListener("click", fonction_aigle);
 valid_lion.addEventListener("click", fonction_lion);
 valid_blaireau.addEventListener("click", fonction_blaireau);
 
-//valid_serpent.addEventListener("click", fonction_serpent);
+valid_serpent.addEventListener("click", fonction_serpent);
 
 /*
 message_vert_gallois.style.display = 'none';

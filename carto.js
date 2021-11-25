@@ -54,12 +54,6 @@ var message_magyar=document.getElementById('message_boutton_magyar');
 var message_boutefeu=document.getElementById('message_boutton_boutefeu');
 var message_aragog=document.getElementById('message_boutton_aragog');
 
-var valid_vert_gallois=document.getElementById('valider_vert_gallois');
-var valid_suedois=document.getElementById('valider_suedois');
-var valid_magyar=document.getElementById('valider_magyar');
-var valid_boutefeu=document.getElementById('valider_boutefeu');
-var valid_aragog=document.getElementById('valider_aragog');
-
 var sol_vert_gallois=document.getElementById('bonne_reponse_vert_gallois');
 var sol_suedois=document.getElementById('bonne_reponse_suedois');
 var sol_magyar=document.getElementById('bonne_reponse_magyar');
@@ -93,6 +87,12 @@ function fonction_serpent(){
     }
 }
 
+
+var valid_vert_gallois=document.getElementById('valider_vert_gallois');
+var valid_suedois=document.getElementById('valider_suedois');
+var valid_magyar=document.getElementById('valider_magyar');
+var valid_boutefeu=document.getElementById('valider_boutefeu');
+var valid_aragog=document.getElementById('valider_aragog');
 
 valid_vert_gallois.addEventListener("click", fonction_vert_gallois);
 valid_suedois.addEventListener("click", fonction_suedois);

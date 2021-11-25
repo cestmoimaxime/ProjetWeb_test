@@ -74,9 +74,8 @@ valid_aigle.addEventListener("click", fonction_aigle);
 valid_lion.addEventListener("click", fonction_lion);
 valid_blaireau.addEventListener("click", fonction_blaireau);
 
-valid_serpent.addEventListener("click", fonction_serpent);
+//valid_serpent.addEventListener("click", fonction_serpent);
 
-<<<<<<< Updated upstream
 /*
 message_vert_gallois.style.display = 'none';
 message_magyar.style.display = 'none';
@@ -89,14 +88,6 @@ message_aigle.style.display = 'none';
 message_blaireau.style.display = 'block';
 */
 console.log('coucou')
-=======
-
-console.log('message_blaireau');
-valid_aigle.addEventListener("click", fonction_aigle) ;
-valid_lion.addEventListener("click", fonction_lion) 
-valid_blaireau.addEventListener("click", fonction_blaireau) 
-valid_serpent.addEventListener("click", fonction_serpent) 
->>>>>>> Stashed changes
 
 function fonction_aigle(){
     if (sol_aigle.checked){

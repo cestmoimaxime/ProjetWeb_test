@@ -155,16 +155,16 @@ var image2 = L.icon({
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
 });
-var message_a_la_con= <div id='message_boutton_serpent'>
-<h1>Quel est le parc national américain le plus visité ?</h1>
-<label>Great Smoky Mountains<input id='bonne_reponse_serpent' type="radio" name="news" value="1"></label>
-<label>Everglades<input type="radio" name="news" value="0"></label>
-<label>Grand Canyon<input type="radio" name="news" value="0"></label>
-<label>Yellowstone<input type="radio" name="news" value="0"></label>
-<button id='valider_serpent' type="button">
-  Valider la réponse
-</button>
-</div>
+var message_a_la_con= '<div id="message_boutton_serpent">\
+<h1>Quel est le parc national américain le plus visité ?</h1>\
+<label>Great Smoky Mountains<input id="bonne_reponse_serpent" type="radio" name="news" value="1"></label>\
+<label>Everglades<input type="radio" name="news" value="0"></label>\
+<label>Grand Canyon<input type="radio" name="news" value="0"></label>\
+<label>Yellowstone<input type="radio" name="news" value="0"></label>\
+<button id="valider_serpent" type="button">\
+  Valider la réponse\
+</button>\
+</div> ';
 var serpent = L.marker([43.8853,-110.5777], {icon: image2})
 serpent.bindPopup(message_a_la_con
 );

@@ -179,6 +179,62 @@ var messagelion= '<div id="message_boutton_lion">\
 </button>\
 </div>';
 
+
+var messagevertgallois= '<div id="message_boutton_vert_gallois">\
+<h1>Que mange Pattenrond au début de "Harry Potter et l ordre du Phénix" ?</h1>\
+<label>Une souris<input type="radio" name="news" value="0"></label>\
+<label>Une oreille à rallonge<input id="bonne_reponse_vert_gallois" type="radio" name="news" value="1"></label>\
+<label>Croûtard<input  type="radio" name="news" value="0"></label>\
+<label>Le devoir de Ron<input type="radio" name="news" value="0"></label>\
+<button id="valider_vert_gallois" type="button">\
+  Valider la réponse\
+</button>\
+</div>';
+
+var messagesuedois= '<div id="message_boutton_suedois">\
+<h1>Comment se nomme le chat de Rusard ?</h1>\
+<label>Miss Teigne<input id="bonne_reponse_suedois" type="radio" name="news" value="1"></label>\
+<label>Arold<input type="radio" name="news" value="0"></label>\
+<label>Hedwige<input type="radio" name="news" value="0"></label>\
+<label>Trevor<input type="radio" name="news" value="0"></label>\
+<button id="valider_suedois" type="button">\
+  Valider la réponse\
+</button>\
+</div>';
+
+var messagemagyar= '<div id="message_boutton_magyar">\
+<h1>Comment se nomment les parents de Ron ?</h1>\
+<label>Molly et George<input type="radio" name="news" value="0"></label>\
+<label>Molly et Arthur<input id="bonne_reponse_magyar" type="radio" name="news" value="1"></label>\
+<label>Lily et Arthur<input type="radio" name="news" value="0"></label>\
+<label>Lily et James<input type="radio" name="news" value="0"></label>\
+<button id="valider_magyar" type="button">\
+  Valider la réponse\
+</button>\
+</div>';
+
+var messageboutefeu= '<div id="message_boutton_boutefeu">\
+      <h1>Quelle est la seconde personne qui aide Harry Potter à résoudre l énigme de l oeuf dans "La coupe de feu" après Cédric Diggory ?</h1>\
+      <label>Dumbledore<input type="radio" name="news" value="0"></label>\
+      <label>Hermione Granger<input type="radio" name="news" value="0"></label>\
+      <label>Mimi Geignarde<input id="bonne_reponse_boutefeu" type="radio" name="news" value="1"></label>\
+      <label>Neville Londubat<input type="radio" name="news" value="0"></label>\
+      <button id="valider_boutefeu" type="button">\
+        Valider la réponse\
+      </button>\
+    </div>';
+
+var messagearagog= '<div id="message_boutton_aragog">\
+    <h1>Un épouvantard surgit devant toi ! Comment te protèges-tu ?</h1>\
+    <label>Accio<input type="radio" name="news" value="0"></label>\
+    <label>Expelliarmus<input type="radio" name="news" value="0"></label>\
+    <label>Stupefix<input type="radio" name="news" value="0"></label>\
+    <label>Riddikulus<input id="bonne_reponse_aragog" type="radio" name="news" value="1"></label>\
+    <button id="valider_aragog" type="button">\
+      Valider la réponse\
+    </button>\
+  </div>';
+
 var serpent = L.marker([43.8853,-110.5777], {icon: image2})
 serpent.bindPopup(messageserpent);
 shelterMarkers.addLayer(serpent);

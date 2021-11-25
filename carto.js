@@ -32,7 +32,7 @@ map.on('mousemove', leafletEvent => {
     radius: 500
 }).addTo(map);*/
 
-/*
+
 let message_lion=document.getElementById('message_boutton_lion');
 let message_aigle=document.getElementById('message_boutton_aigle');
 let message_blaireau=document.getElementById('message_boutton_blaireau');
@@ -65,7 +65,7 @@ var sol_suedois=document.getElementById('bonne_reponse_suedois');
 var sol_magyar=document.getElementById('bonne_reponse_magyar');
 var sol_boutefeu=document.getElementById('bonne_reponse_boutefeu');
 var sol_aragog=document.getElementById('bonne_reponse_aragog');
-*/
+
 
 
 /*
@@ -80,7 +80,7 @@ message_aigle.style.display = 'none';
 message_blaireau.style.display = 'block';
 */
 //console.log('coucou')
-/*
+
 function fonction_aigle(){
     if (sol_aigle.checked){
       console.log('Bravo')
@@ -102,7 +102,7 @@ function fonction_serpent(){
       $mdp.innerHTML+='ort';
     }
 }
-*/
+
 
 valid_vert_gallois.addEventListener("click", fonction_vert_gallois);
 valid_suedois.addEventListener("click", fonction_suedois);

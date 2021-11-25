@@ -35,11 +35,11 @@ map.on('mousemove', leafletEvent => {
     radius: 500
 }).addTo(map);*/
 
-//document.getElementById('message_button').style.display = 'block';
+/*
 let message_lion=document.getElementById('message_boutton_lion');
 let message_aigle=document.getElementById('message_boutton_aigle');
 let message_blaireau=document.getElementById('message_boutton_blaireau');
-//let message_serpent=document.getElementById('message_boutton_serpent');
+let message_serpent=document.getElementById('message_boutton_serpent');
 var valid_blaireau=document.getElementById('valider_blaireau');
 var valid_lion=document.getElementById('valider_lion');
 var valid_aigle=document.getElementById('valider_aigle');
@@ -68,13 +68,8 @@ var sol_suedois=document.getElementById('bonne_reponse_suedois');
 var sol_magyar=document.getElementById('bonne_reponse_magyar');
 var sol_boutefeu=document.getElementById('bonne_reponse_boutefeu');
 var sol_aragog=document.getElementById('bonne_reponse_aragog');
+*/
 
-
-valid_aigle.addEventListener("click", fonction_aigle);
-valid_lion.addEventListener("click", fonction_lion);
-valid_blaireau.addEventListener("click", fonction_blaireau);
-
-//valid_serpent.addEventListener("click", fonction_serpent);
 
 /*
 message_vert_gallois.style.display = 'none';
@@ -87,8 +82,8 @@ message_serpent.style.display = 'none';
 message_aigle.style.display = 'none';
 message_blaireau.style.display = 'block';
 */
-console.log('coucou')
-
+//console.log('coucou')
+/*
 function fonction_aigle(){
     if (sol_aigle.checked){
       console.log('Bravo')
@@ -110,7 +105,7 @@ function fonction_serpent(){
       $mdp.innerHTML+='ort';
     }
 }
-
+*/
 
 valid_vert_gallois.addEventListener("click", fonction_vert_gallois);
 valid_suedois.addEventListener("click", fonction_suedois);

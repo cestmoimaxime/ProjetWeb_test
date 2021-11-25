@@ -1,8 +1,5 @@
-<<<<<<< Updated upstream
 
 
-=======
->>>>>>> Stashed changes
 const $coords = document.getElementById("coords");
 const $displayCoords = document.getElementById("displayCoords");
 const $formRecherche = document.getElementById("formRecherche");

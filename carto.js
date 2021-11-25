@@ -64,7 +64,7 @@ var sol_aragog=document.getElementById('bonne_reponse_aragog');
 
 
 //console.log('coucou')
-
+/*
 function fonction_aigle(){
     if (sol_aigle.checked){
       console.log('Bravo')
@@ -89,6 +89,7 @@ function fonction_serpent(){
 
 
 var valid_vert_gallois=document.getElementById('valider_vert_gallois');
+console.log(valid_vert_gallois);
 var valid_suedois=document.getElementById('valider_suedois');
 var valid_magyar=document.getElementById('valider_magyar');
 var valid_boutefeu=document.getElementById('valider_boutefeu');
@@ -123,29 +124,24 @@ function fonction_aragog(){
       console.log('Bravo')
   }
 }
-
+*/
 
 
 
 //$(".messagebutton").hide();
-var image1 = L.icon({
-    iconUrl:'poufsouffle_blaireau.jpg',
-    iconSize:[32,37],
-    iconAnchor:[16,37],
-    popupAnchor:[-3,-76]
-  });
-var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
-blaireau.bindPopup(message_blaireau);
-var shelterMarkers = new L.FeatureGroup();
-shelterMarkers.addLayer(blaireau);
 
-var image2 = L.icon({
-  iconUrl:'serpentard_serpent.jpg',
-  iconSize:[32,37],
-  iconAnchor:[16,37],
-  popupAnchor:[-3,-76]
-});
 
+
+var messageblaireau= '<div id="message_boutton_blaireau">\
+<h1> Quelle est la hauteur de l Etna et combien d eruptions a-t-il connu au 20 ème siècle?</h1>\
+<label>3360m 80 <input type="radio" name="news" value="0"></label>\
+<label>2140m 20<input id="bonne_reponse_magyar" type="radio" name="news" value="1"></label>\
+<label>1290m 130<input type="radio" name="news" value="0"></label>\
+<label>2540m  50<input type="radio" name="news" value="0"></label>\
+<button id="valider_blaireau" type="button">\
+  Valider la réponse\
+</button>\
+</div>';
 var messageserpent= '<div id="message_boutton_serpent">\
 <h1>Quel est le parc national américain le plus visité ?</h1>\
 <label>Great Smoky Mountains<input id="bonne_reponse_serpent" type="radio" name="news" value="1"></label>\
@@ -156,7 +152,6 @@ var messageserpent= '<div id="message_boutton_serpent">\
   Valider la réponse\
 </button>\
 </div> ';
-
 var messageaigle= '<div id="message_boutton_aigle">\
 <h1>Quel évènement important s’est produit l’année de la création du Puy du Fou ?</h1>\
 <label>Le renouvellement des accords bilatéraux Andorre-Moldavie<input type="radio" name="news" value="0"></label>\
@@ -167,7 +162,6 @@ var messageaigle= '<div id="message_boutton_aigle">\
   Valider la réponse\
   </button>\
 </div>';
-
 var messagelion= '<div id="message_boutton_lion">\
 <h1>Quel animal ne constitue pas une épreuve des 12 travaux d’Héraklès ?</h1>\
 <label>Le sanglier<input type="radio" name="news" value="0"></label>\
@@ -178,8 +172,6 @@ var messagelion= '<div id="message_boutton_lion">\
   Valider la réponse\
 </button>\
 </div>';
-
-
 var messagevertgallois= '<div id="message_boutton_vert_gallois">\
 <h1>Que mange Pattenrond au début de "Harry Potter et l ordre du Phénix" ?</h1>\
 <label>Une souris<input type="radio" name="news" value="0"></label>\
@@ -190,7 +182,6 @@ var messagevertgallois= '<div id="message_boutton_vert_gallois">\
   Valider la réponse\
 </button>\
 </div>';
-
 var messagesuedois= '<div id="message_boutton_suedois">\
 <h1>Comment se nomme le chat de Rusard ?</h1>\
 <label>Miss Teigne<input id="bonne_reponse_suedois" type="radio" name="news" value="1"></label>\
@@ -201,7 +192,6 @@ var messagesuedois= '<div id="message_boutton_suedois">\
   Valider la réponse\
 </button>\
 </div>';
-
 var messagemagyar= '<div id="message_boutton_magyar">\
 <h1>Comment se nomment les parents de Ron ?</h1>\
 <label>Molly et George<input type="radio" name="news" value="0"></label>\
@@ -212,7 +202,6 @@ var messagemagyar= '<div id="message_boutton_magyar">\
   Valider la réponse\
 </button>\
 </div>';
-
 var messageboutefeu= '<div id="message_boutton_boutefeu">\
       <h1>Quelle est la seconde personne qui aide Harry Potter à résoudre l énigme de l oeuf dans "La coupe de feu" après Cédric Diggory ?</h1>\
       <label>Dumbledore<input type="radio" name="news" value="0"></label>\
@@ -223,7 +212,6 @@ var messageboutefeu= '<div id="message_boutton_boutefeu">\
         Valider la réponse\
       </button>\
     </div>';
-
 var messagearagog= '<div id="message_boutton_aragog">\
     <h1>Un épouvantard surgit devant toi ! Comment te protèges-tu ?</h1>\
     <label>Accio<input type="radio" name="news" value="0"></label>\
@@ -234,10 +222,28 @@ var messagearagog= '<div id="message_boutton_aragog">\
       Valider la réponse\
     </button>\
   </div>';
+  var image1 = L.icon({
+    iconUrl:'poufsouffle_blaireau.jpg',
+    iconSize:[32,37],
+    iconAnchor:[16,37],
+    popupAnchor:[-3,-76]
+  });
+var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
+blaireau.bindPopup(messageblaireau);
+var shelterMarkers = new L.FeatureGroup();
+shelterMarkers.addLayer(blaireau);
 
+
+var image2 = L.icon({
+  iconUrl:'serpentard_serpent.jpg',
+  iconSize:[32,37],
+  iconAnchor:[16,37],
+  popupAnchor:[-3,-76]
+});
 var serpent = L.marker([43.8853,-110.5777], {icon: image2})
 serpent.bindPopup(messageserpent);
 shelterMarkers.addLayer(serpent);
+
 
 var image3 = L.icon({
   iconUrl:'serdaigle_aigle.jpg',

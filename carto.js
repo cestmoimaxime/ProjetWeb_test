@@ -212,6 +212,7 @@ var messageboutefeu= '<div id="message_boutton_boutefeu">\
         Valider la réponse\
       </button>\
     </div>';
+
 var messagearagog= '<div id="message_boutton_aragog">\
     <h1>Un épouvantard surgit devant toi ! Comment te protèges-tu ?</h1>\
     <label>Accio<input type="radio" name="news" value="0"></label>\
@@ -300,6 +301,7 @@ var image8 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
+
 var prison=L.marker([59.745,1.600], {icon:image8})
 shelterMarkers.addLayer(prison)
 
@@ -321,14 +323,6 @@ aragog.bindPopup('<div id="message_boutton_aragog">\
 </button>\
 </div>')
 shelterMarkers.addLayer(aragog)
-
-
-let $time = document.getElementById('time');
-
-setInterval( () => {
-    let heure = new Date().toLocaleTimeString('fr');
-    $time.innerHTML = heure;
-}, 1000);
 
 
 

@@ -64,7 +64,7 @@ body {
     top: 50px;
 }
 
-.menuElement a {
+#menuElement a {
     color: red;
     font-size: 1.2em;
     text-decoration: none;
@@ -72,7 +72,7 @@ body {
     padding: 0 2px;
 }
 
-.menuElement a:hover {
+#menuElement a:hover {
     color: red;
     font-size: 1.2em;
     text-decoration: none;

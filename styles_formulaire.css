@@ -1,0 +1,45 @@
+* {
+    /* nouveau modèle de boite */
+    box-sizing: border-box;
+}
+
+html {
+    background-color: white;
+    background-image: url(fond_ecran3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: Arial;
+    width: 88%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+#footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / span 2;
+    grid-row : 3 / span 1;
+}
+
+/* Commentaire */
+#header {
+    padding: 0 5px 0 5px;
+    grid-row : 1 / span 1;
+    grid-column: 1 / span 2;
+}
+
+h1{
+    font-size: 4em;
+    text-align: center;
+    color : rgba(255, 255, 255, 0.527);
+    font-family:"Segoe print";
+    font-weight:lighter;
+}

@@ -36,8 +36,11 @@ body {
     grid-column: 1 / span 2;
 }
 
-h1 {
-
+h1{
+    font-size: 4em;
+    text-align: center;
+    color : rgba(255, 255, 255, 0.527);
+    font-family:"Segoe print";
 }
 
 #topMenu ul {

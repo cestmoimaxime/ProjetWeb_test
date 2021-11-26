@@ -41,6 +41,7 @@ h1{
     text-align: center;
     color : rgba(255, 255, 255, 0.527);
     font-family:"Segoe print";
+    font-weight:lighter;
 }
 
 #topMenu ul {
@@ -300,6 +301,6 @@ form input {
 #mot_de_passe{
     font-family: Arial;
     font-size: xx-large;
-    background-color: #6820D9;
+    background-color: #615e66;
 }
 

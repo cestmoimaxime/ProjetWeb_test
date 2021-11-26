@@ -39,7 +39,33 @@ body {
 h1{
     font-size: 4em;
     text-align: center;
-    color : rgba(255, 255, 255, 0.527);
+    color : black;
     font-family:"Segoe print";
     font-weight:lighter;
 }
+
+fieldset{
+  background-color:#CCC;
+  max-width:500px;
+  padding:16px;	
+}
+.legend{
+  margin-bottom:0px;
+  margin-left:16px;
+}
+
+h3{
+    font-size: 1.5em;
+    text-align: center;
+    color : black;
+    font-family:"Segoe print";
+}
+
+#topMenu ul li {
+    font-size: 1.5em;
+    text-align: center;
+    font-family:"Segoe print";
+    font-weight:lighter;
+}
+
+

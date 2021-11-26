@@ -4,9 +4,11 @@
 }
 
 html {
-    background-color: darkolivegreen;
-    background-image: url(fond_ecran.jpg);
+    background-color: white;
+    background-image: url(fond_ecran4.jpg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
@@ -29,9 +31,13 @@ body {
 
 /* Commentaire */
 #header {
-    padding: 0 5px 0 5px;
+    padding: 0 10**5px 0 5px;
     grid-row : 1 / span 1;
     grid-column: 1 / span 2;
+}
+
+h1 {
+    
 }
 
 #topMenu ul {

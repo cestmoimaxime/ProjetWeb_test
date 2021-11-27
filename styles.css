@@ -37,10 +37,34 @@ body {
     grid-column: 1 / span 2;
 }
 
-h1{
+h3{ /*titre*/
     font-size: 4em;
     text-align: center;
     color : rgba(255, 255, 255, 0.527);
+    font-family:"Segoe print";
+    font-weight:lighter;
+}
+
+h1{ /*aspect des questions*/
+    font-size: 1.5em;
+    text-align: center;
+    color : black;
+    font-family:"Segoe print";
+    font-weight:lighter;
+}
+
+h2{ /*aspect du texte de Hagrid : titre*/
+    font-size: 1.5em;
+    text-align: center;
+    color : black;
+    font-family:"Segoe print";
+    font-weight:lighter;
+}
+
+h4{ /*aspect du texte de Hagrid : phrases*/
+    font-size: 0.75em;
+    text-align: center;
+    color : black;
     font-family:"Segoe print";
     font-weight:lighter;
 }
@@ -115,11 +139,6 @@ em {
 
 #texte1 {
     color: darkolivegreen;
-}
-
-h2 {
-    font-size: 1.5em;
-    text-decoration: green underline;
 }
 
 form {
@@ -214,8 +233,9 @@ form input {
     background-color: rgba(0,0,0,.1);
 }
 
-#mapid { 
+#mapid /*position de la carte*/{ 
     height: 600px;
+    width: 1200px;
 }
 
 #coords {

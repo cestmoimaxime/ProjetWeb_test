@@ -300,6 +300,12 @@ var dragon_chinois=L.marker([23.990,121.013], {icon:image6})
 dragon_chinois.bindPopup(messageboutefeu)
 shelterMarkers_dragon.addLayer(dragon_chinois)
 
+
+var messageDurmstrong= '<div id="message_boutton_Durmstrong">\
+    <h1>Bonjour petit sorcier. Désolé de t être déplacé pour rien, mais Igor Karkaroff, le directeur, n est pas présent. Il séjourne quelques temps à Azkaban. Tu le trouveras là-bas si tu oses y aller. Bonne chance (tu en auras besoin...) !</h1>\
+    </div>';
+
+
 var image7 = L.icon({
     iconUrl:'durmstrang.jpg',
     iconSize:[128,148],
@@ -307,7 +313,20 @@ var image7 = L.icon({
     popupAnchor:[-3,-76]
   });
 var ecole_russe=L.marker([59.008,59.139], {icon:image7})
+ecole_russe.bindPopup(messageDurmstrong)
 shelterMarkers_ecole.addLayer(ecole_russe)
+
+var messagePrison= '<div id="message_boutton_prison">\
+    <h1>Complète cette suite logique : U ; D ; T ; Q ; C ; S ; S ; ? ; ?</h1>\
+    <label>K ; L<input type="radio" name="news" value="0"></label>\
+    <label>R ; S<input type="radio" name="news" value="0"></label>\
+    <label>U ; Q<input type="radio" name="news" value="0"></label>\
+    <label>H ; N<input id="bonne_reponse_aragog" type="radio" name="news" value="1"></label>\
+    <button id="valider_prison" type="button">\
+      Valider la réponse\
+    </button>\
+  </div>';
+
 
 var image8 = L.icon({
     iconUrl:'azkaban.jpg',
@@ -317,6 +336,7 @@ var image8 = L.icon({
   });
 
 var prison=L.marker([59.745,1.600], {icon:image8})
+prison.bindPopup(messagePrison)
 shelterMarkers_ecole.addLayer(prison)
 
 var image9 = L.icon({
@@ -338,7 +358,16 @@ aragog.bindPopup('<div id="message_boutton_aragog">\
 </div>')
 shelterMarkers_dragon.addLayer(aragog)
 
-
+var messageBB= '<div id="message_boutton_BB">\
+    <h1>Quel est le nombre qui est tel que si on le multiplie par deux, on lui ajoute sa moitié puis son quart et enfin 1, donnera 100 ?</h1>\
+    <label>Flemme de calculer<input type="radio" name="news" value="0"></label>\
+    <label>35<input type="radio" name="news" value="0"></label>\
+    <label>8<input type="radio" name="news" value="0"></label>\
+    <label>36<input id="bonne_reponse_BB" type="radio" name="news" value="1"></label>\
+    <button id="valider_BB" type="button">\
+      Valider la réponse\
+    </button>\
+  </div>';
 
 
 var image10 = L.icon({
@@ -348,6 +377,7 @@ var image10 = L.icon({
     popupAnchor:[-3,-76]
   });
 var beauxbatons=L.marker([47.0134,3.3393], {icon:image10})
+beauxbatons.bindPopup(messageBB);
 shelterMarkers_ecole.addLayer(beauxbatons)
 
 var image11 = L.icon({
@@ -394,6 +424,19 @@ var image14 = L.icon({
 var maison=L.marker([50.1027, -5.3892], {icon:image14})
 shelterMarkers_chaumiere.addLayer(maison)
 
+
+var messagePoudlard= '<div id="message_boutton_poudlard">\
+    <h1>Un hippogryffe mange 140 insectes en 5 jours. Chaque jour, il en mange 3 de plus. Combien en mange-t-il le 5ème jour ?</h1>\
+    <label>22<input type="radio" name="news" value="0"></label>\
+    <label>140<input type="radio" name="news" value="0"></label>\
+    <label>20<input type="radio" name="news" value="0"></label>\
+    <label>24<input id="bonne_reponse_poudlard" type="radio" name="news" value="1"></label>\
+    <button id="valider_poudlard" type="button">\
+      Valider la réponse\
+    </button>\
+  </div>'; 
+
+
 var image15 = L.icon({
     iconUrl:'poudlard.jpg',
     iconSize:[128,148],
@@ -401,6 +444,7 @@ var image15 = L.icon({
     popupAnchor:[-3,-76]
   });
 var poudlard=L.marker([56.9745, -4.4125], {icon:image15})
+poudlard.bindPopup(messagePoudlard)
 shelterMarkers.addLayer(poudlard)
 
 

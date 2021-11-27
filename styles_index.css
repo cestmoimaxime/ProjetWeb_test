@@ -1,7 +1,9 @@
 html {
     background-color: white;
-    background-image: url(fond_ecran2.jpg);
+    background-image: url(fond_ecran_index.jpg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
@@ -16,11 +18,12 @@ body {
 
 
 .menuElement a {
-    color: black; /*START*/
+    color: white; /*START*/
     font-size: 1.2em;
     text-decoration: none;
     background-color: #00000018;
     padding: 0 2px;
+    font-family:"Segoe print";
 }
 
 #content {
@@ -28,11 +31,16 @@ body {
     grid-row: 2 / span 1;
     padding: 20px 10px;
 }
+#texte1 {
+    color: white;
+    font-size: 2em;
+}
 
 image1 {
     height: 200px;
     text-align: center;
     padding-right: 5px;
+
 }
 
 
@@ -46,14 +54,11 @@ em {
     text-decoration: underline;
 }
 
-texte1 {
-    color: red;
-    font-size: 2em;
-}
 
 h1 {
-    font-size: 2em;
-    text-decoration: underline;
+    font-size: 4em;
+    color: grey;
+    font-family:"Segoe print";
 }
 
 

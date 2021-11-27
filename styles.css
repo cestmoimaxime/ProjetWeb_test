@@ -186,7 +186,7 @@ form input {
     line-height: 100px;
     background-color: black;
     background-image: url("gryffondor_lion.jpg");
-    z-index: 10;
+    z-index: 100000;
     user-select: none;
 }
 
@@ -219,7 +219,7 @@ form input {
 }
 
 #coords {
-    z-index: 100000000000;
+    z-index: 100;
     position: fixed;
     color: white;
     padding: 2px;
@@ -312,4 +312,9 @@ form input {
 
 #message_boutton_serpent{
     visibility: hidden;
+}
+
+#time{
+    color: rgb(6, 158, 14);
+    font-size: xx-large;
 }

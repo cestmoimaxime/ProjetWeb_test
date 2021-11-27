@@ -4,9 +4,11 @@
 }
 
 html {
-    background-color: darkolivegreen;
-    background-image: url(fond_ecran.jpg);
+    background-color: white;
+    background-image: url(fond_ecran4.jpg);
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
@@ -33,6 +35,14 @@ body {
     padding: 0 5px 0 5px;
     grid-row : 1 / span 1;
     grid-column: 1 / span 2;
+}
+
+h1{
+    font-size: 4em;
+    text-align: center;
+    color : rgba(255, 255, 255, 0.527);
+    font-family:"Segoe print";
+    font-weight:lighter;
 }
 
 #topMenu ul {
@@ -292,7 +302,7 @@ form input {
 #mot_de_passe{
     font-family: Arial;
     font-size: xx-large;
-    background-color: #6820D9;
+    background-color: #615e66;
 }
 
 #message_boutton_blaireau{

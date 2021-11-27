@@ -69,25 +69,30 @@
 <?php 
 include('connect.php');
 
-$sql = "SELECT blabla  FROM icone WHERE nom='Hagrid' " ;
+$results = [];
 
-$result = mysqli_query($link,$sql);
-
-if (!$result) {
-  echo mysqli_error($link);
+$requete = "SELECT *  FROM icone " ;
+$result=mysqli_query($link,$requete);
+if ($result = mysqli_query($link,$requete)){
+  while ($ligne=mysqli_fetch_assoc($result)){
+array_push($results,[
+  "id" => intval($ligne['id']),
+      "name" => $ligne['nom'],
+      "lat" => floatval($ligne['lat']),
+      "long" => floatval($ligne['long']),
+      "zoom" => intval($ligne['zoom']),
+      "taille" => intval($ligne['taille']),
+      "path" => $ligne['path'], 
+]);
 }
+}
+if (isset($_GET['id'])){
+  echo json_encode($results[$_GET['id']-1]);
 
-if (mysqli_num_rows($result) > 0) {
-  // output data of each row
-  while($row = mysqli_fetch_assoc($result)) {
-    echo $row["nom"];
-  }
 }
 else{
-  echo("ca marche pas");
+  echo json_encode([$results[0], $results[1]]) ;
 }
-$link->close();
-
  ?>
     <script src="carto.js"></script>
     <script src="popup.js"></script>
@@ -95,4 +100,3 @@ $link->close();
 
   </body>
   </html>
-  

@@ -6,8 +6,9 @@ const $formRecherche = document.getElementById("formRecherche");
 
 let map = L.map('mapid').setView([46.836, 4.5870], 7);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+	maxZoom: 16
 }).addTo(map);
 
 
@@ -79,10 +80,13 @@ blaireau.on("click", rendreinvisibleb );
 function rendreinvisibleb(){
   message_blaireau.style.visibility='visible';
 }
-
+var compteurs=0;
+var compteurb = 0;
 function fonction_blaireau(){
-  if (sol_blaireau.checked){
+
+  if (sol_blaireau.checked && compteurb==0){
     $mdp.innerHTML+='em';
+    compteurb+=1;
   }
 }
 
@@ -108,8 +112,11 @@ function rendreinvisibles(){
 
 
 function fonction_serpent(){
-  if (sol_serpent.checked){
+ 
+  if (sol_serpent.checked && compteurs==0){
     $mdp.innerHTML+='ort';
+    compteurs+=1;
+
   }
 }
 /*
@@ -444,16 +451,13 @@ setInterval( () => {
     zero_minutes='0';
   }
   if (nombre_minutes==0){
-    console.log('0 dans les minutes');
     zero_minutes='0';
   }
   console.log(vrai_nombre_secondes);
   if (vrai_nombre_secondes.toString().length==1){
-    console.log('1 chiffre dans les secondes');
     zero_secondes='0';
   }
   if (vrai_nombre_secondes.toString().length==2){
-    console.log('1 chiffre dans les secondes');
     zero_secondes='';
   }
   nombrefinal='00:'+zero_minutes+nombre_minutes+':'+zero_secondes+vrai_nombre_secondes;

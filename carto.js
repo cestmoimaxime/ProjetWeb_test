@@ -276,6 +276,13 @@ lion.bindPopup(messagelion);
 shelterMarkers.addLayer(lion);
 
 
+/* nouvelle couche avec les 4 dragons et Aragog */
+var shelterMarkers_dragon = new L.FeatureGroup();
+
+/* nouvelle couche avec BB, Durmonstrong et Azkaban */
+var shelterMarkers_ecole = new L.FeatureGroup();
+
+
 var image5 = L.icon({
   iconUrl:'hagrid.jpg',
   iconSize:[32,37],
@@ -291,7 +298,7 @@ var image6 = L.icon({
   });
 var dragon_chinois=L.marker([23.990,121.013], {icon:image6})
 dragon_chinois.bindPopup(messageboutefeu)
-shelterMarkers.addLayer(dragon_chinois)
+shelterMarkers_dragon.addLayer(dragon_chinois)
 
 var image7 = L.icon({
     iconUrl:'durmstrang.jpg',
@@ -300,7 +307,7 @@ var image7 = L.icon({
     popupAnchor:[-3,-76]
   });
 var ecole_russe=L.marker([59.008,59.139], {icon:image7})
-shelterMarkers.addLayer(ecole_russe)
+shelterMarkers_ecole.addLayer(ecole_russe)
 
 var image8 = L.icon({
     iconUrl:'azkaban.jpg',
@@ -310,7 +317,7 @@ var image8 = L.icon({
   });
 
 var prison=L.marker([59.745,1.600], {icon:image8})
-shelterMarkers.addLayer(prison)
+shelterMarkers_ecole.addLayer(prison)
 
 var image9 = L.icon({
     iconUrl:'aragog.jpg',
@@ -329,7 +336,7 @@ aragog.bindPopup('<div id="message_boutton_aragog">\
   Valider la réponse\
 </button>\
 </div>')
-shelterMarkers.addLayer(aragog)
+shelterMarkers_dragon.addLayer(aragog)
 
 
 
@@ -341,7 +348,7 @@ var image10 = L.icon({
     popupAnchor:[-3,-76]
   });
 var beauxbatons=L.marker([47.0134,3.3393], {icon:image10})
-shelterMarkers.addLayer(beauxbatons)
+shelterMarkers_ecole.addLayer(beauxbatons)
 
 var image11 = L.icon({
     iconUrl:'magyar_a_pointe.jpg',
@@ -352,7 +359,7 @@ var image11 = L.icon({
 
 var dragon_hongrie=L.marker([47.0068,18.1659], {icon:image11})
 dragon_hongrie.bindPopup('camarche');
-shelterMarkers.addLayer(dragon_hongrie);
+shelterMarkers_dragon.addLayer(dragon_hongrie);
 
 var image12 = L.icon({
     iconUrl:'vert_gallois.jpg',
@@ -362,7 +369,7 @@ var image12 = L.icon({
   });
 var dragon_galles=L.marker([52.3852,-3.6966], {icon:image12})
 dragon_galles.bindPopup(messagevertgallois)
-shelterMarkers.addLayer(dragon_galles)
+shelterMarkers_dragon.addLayer(dragon_galles)
 
 var image13 = L.icon({
     iconUrl:'suedois_a_museau_court.jpg',
@@ -372,7 +379,11 @@ var image13 = L.icon({
   });
 var dragon_suede=L.marker([59.872,17.631], {icon:image13})
 dragon_suede.bindPopup(messagesuedois)
-shelterMarkers.addLayer(dragon_suede)
+shelterMarkers_dragon.addLayer(dragon_suede)
+
+/* nouvelle couche */
+var shelterMarkers_chaumiere = new L.FeatureGroup();
+
 
 var image14 = L.icon({
     iconUrl:'chaumiere_aux_coquillages.jpg',
@@ -381,7 +392,7 @@ var image14 = L.icon({
     popupAnchor:[-3,-76]
   });
 var maison=L.marker([50.1027, -5.3892], {icon:image14})
-shelterMarkers.addLayer(maison)
+shelterMarkers_chaumiere.addLayer(maison)
 
 var image15 = L.icon({
     iconUrl:'poudlard.jpg',
@@ -399,11 +410,19 @@ shelterMarkers.addLayer(hagrid);
 map.on('zoomend', function() {
     if (map.getZoom() <4){
             map.removeLayer(shelterMarkers);
+            map.removeLayer(shelterMarkers_dragon);
+            map.removeLayer(shelterMarkers_ecole);
+            map.removeLayer(shelterMarkers_chaumiere);
     }
     else {
             map.addLayer(shelterMarkers);
+            map.addLayer(shelterMarkers_dragon);
+            map.addLayer(shelterMarkers_ecole);
+            map.addLayer(shelterMarkers_chaumiere);
         }
 });
+
+
 
 
 

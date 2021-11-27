@@ -355,7 +355,7 @@ var image11 = L.icon({
   });
 
 var dragon_hongrie=L.marker([47.0068,18.1659], {icon:image11})
-dragon_hongrie.bindPopup('camarche');
+dragon_hongrie.bindPopup(messagemagyar);
 shelterMarkers_dragon.addLayer(dragon_hongrie);
 
 var image12 = L.icon({

@@ -17,6 +17,7 @@ body {
     grid-template-columns: 200px 1fr;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
+
 }
 
 #footer {
@@ -175,7 +176,7 @@ form input {
     line-height: 100px;
     background-color: black;
     background-image: url("gryffondor_lion.jpg");
-    z-index: 1000;
+    z-index: 10;
     user-select: none;
 }
 
@@ -208,7 +209,7 @@ form input {
 }
 
 #coords {
-    z-index: 1000;
+    z-index: 100000000000;
     position: fixed;
     color: white;
     padding: 2px;
@@ -279,7 +280,7 @@ form input {
 
 
 #overlay{
-  z-index:10000 ;
+  z-index: 10000 ;
   width: 500px;
 }
 
@@ -294,3 +295,11 @@ form input {
     background-color: #6820D9;
 }
 
+#message_boutton_blaireau{
+    visibility: hidden;
+}
+
+
+#message_boutton_serpent{
+    visibility: hidden;
+}

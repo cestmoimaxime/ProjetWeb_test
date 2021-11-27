@@ -33,18 +33,18 @@ map.on('mousemove', leafletEvent => {
 }).addTo(map);*/
 
 
+/*
 let message_lion=document.getElementById('message_boutton_lion');
 let message_aigle=document.getElementById('message_boutton_aigle');
-let message_blaireau=document.getElementById('message_boutton_blaireau');
-let message_serpent=document.getElementById('message_boutton_serpent');
-var valid_blaireau=document.getElementById('valider_blaireau');
+
+
 var valid_lion=document.getElementById('valider_lion');
 var valid_aigle=document.getElementById('valider_aigle');
-var valid_serpent=document.getElementById('valider_serpent');
-var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
+
+
 var sol_lion=document.getElementById('bonne_reponse_lion');
 var sol_aigle=document.getElementById('bonne_reponse_aigle');
-var sol_serpent=document.getElementById('bonne_reponse_serpent');
+
 
 
 var message_vert_gallois=document.getElementById('message_boutton_vert_gallois');
@@ -59,11 +59,59 @@ var sol_magyar=document.getElementById('bonne_reponse_magyar');
 var sol_boutefeu=document.getElementById('bonne_reponse_boutefeu');
 var sol_aragog=document.getElementById('bonne_reponse_aragog');
 
-
-
+*/
 var $mdp=document.getElementById('mot_de_passe');
+var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
+var valid_blaireau=document.getElementById('valider_blaireau');
+let message_blaireau=document.getElementById('message_boutton_blaireau');
+var image1 = L.icon({
+  iconUrl:'poufsouffle_blaireau.jpg',
+  iconSize:[32,37],
+  iconAnchor:[16,37],
+  popupAnchor:[-3,-76]
+});
+var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
+blaireau.bindPopup(message_blaireau);
+var shelterMarkers = new L.FeatureGroup();
+shelterMarkers.addLayer(blaireau);
+valid_blaireau.addEventListener("click", fonction_blaireau);
+blaireau.on("click", rendreinvisibleb );
+function rendreinvisibleb(){
+  message_blaireau.style.visibility='visible';
+}
 
-//console.log('coucou')
+function fonction_blaireau(){
+  if (sol_blaireau.checked){
+    $mdp.innerHTML+='em';
+  }
+}
+
+let message_serpent=document.getElementById('message_boutton_serpent');
+var sol_serpent=document.getElementById('bonne_reponse_serpent');
+var valid_serpent=document.getElementById('valider_serpent');
+
+var image2 = L.icon({
+  iconUrl:'serpentard_serpent.jpg',
+  iconSize:[32,37],
+  iconAnchor:[16,37],
+  popupAnchor:[-3,-76]
+});
+var serpent = L.marker([43.8853,-110.5777], {icon: image2})
+serpent.bindPopup(message_serpent);
+shelterMarkers.addLayer(serpent);
+valid_serpent.addEventListener("click", fonction_serpent);
+serpent.on("click", rendreinvisibles );
+
+function rendreinvisibles(){
+  message_serpent.style.visibility='visible';
+}
+
+
+function fonction_serpent(){
+  if (sol_serpent.checked){
+    $mdp.innerHTML+='ort';
+  }
+}
 /*
 function fonction_aigle(){
     if (sol_aigle.checked){
@@ -76,16 +124,7 @@ function fonction_lion(){
       $mdp.innerHTML+='ld';
     }
 }
-function fonction_blaireau(){
-    if (sol_blaireau.checked){
-      $mdp.innerHTML+='em';
-    }
-}
-function fonction_serpent(){
-    if (sol_serpent.checked){
-      $mdp.innerHTML+='ort';
-    }
-}
+
 
 
 var valid_vert_gallois=document.getElementById('valider_vert_gallois');
@@ -128,30 +167,7 @@ function fonction_aragog(){
 
 
 
-//$(".messagebutton").hide();
 
-
-
-var messageblaireau= '<div id="message_boutton_blaireau">\
-<h1> Quelle est la hauteur de l Etna et combien d eruptions a-t-il connu au 20 ème siècle?</h1>\
-<label>3360m 80 <input type="radio" name="news" value="0"></label>\
-<label>2140m 20<input id="bonne_reponse_magyar" type="radio" name="news" value="1"></label>\
-<label>1290m 130<input type="radio" name="news" value="0"></label>\
-<label>2540m  50<input type="radio" name="news" value="0"></label>\
-<button id="valider_blaireau" type="button">\
-  Valider la réponse\
-</button>\
-</div>';
-var messageserpent= '<div id="message_boutton_serpent">\
-<h1>Quel est le parc national américain le plus visité ?</h1>\
-<label>Great Smoky Mountains<input id="bonne_reponse_serpent" type="radio" name="news" value="1"></label>\
-<label>Everglades<input type="radio" name="news" value="0"></label>\
-<label>Grand Canyon<input type="radio" name="news" value="0"></label>\
-<label>Yellowstone<input type="radio" name="news" value="0"></label>\
-<button id="valider_serpent" type="button">\
-  Valider la réponse\
-</button>\
-</div> ';
 var messageaigle= '<div id="message_boutton_aigle">\
 <h1>Quel évènement important s’est produit l’année de la création du Puy du Fou ?</h1>\
 <label>Le renouvellement des accords bilatéraux Andorre-Moldavie<input type="radio" name="news" value="0"></label>\
@@ -224,27 +240,8 @@ var messagearagog= '<div id="message_boutton_aragog">\
     </button>\
   </div>';
   
-  var image1 = L.icon({
-    iconUrl:'poufsouffle_blaireau.jpg',
-    iconSize:[32,37],
-    iconAnchor:[16,37],
-    popupAnchor:[-3,-76]
-  });
-var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
-blaireau.bindPopup(messageblaireau);
-var shelterMarkers = new L.FeatureGroup();
-shelterMarkers.addLayer(blaireau);
 
 
-var image2 = L.icon({
-  iconUrl:'serpentard_serpent.jpg',
-  iconSize:[32,37],
-  iconAnchor:[16,37],
-  popupAnchor:[-3,-76]
-});
-var serpent = L.marker([43.8853,-110.5777], {icon: image2})
-serpent.bindPopup(messageserpent);
-shelterMarkers.addLayer(serpent);
 
 
 var image3 = L.icon({
@@ -342,9 +339,10 @@ var image11 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
+
 var dragon_hongrie=L.marker([47.0068,18.1659], {icon:image11})
-dragon_hongrie.bindPopup(messagemagyar)
-shelterMarkers.addLayer(dragon_hongrie)
+dragon_hongrie.bindPopup('camarche');
+shelterMarkers.addLayer(dragon_hongrie);
 
 var image12 = L.icon({
     iconUrl:'vert_gallois.jpg',
@@ -430,3 +428,15 @@ $formRecherche.addEventListener('submit', (event) => {
     });
 });
 */
+let heure_debut=new Date();
+
+let minuteur=document.getElementById('time');
+setInterval( () => {
+  let heure = new Date();
+  u=(Math.abs(heure-heure_debut).toString()).slice(0,-3);
+  nb_secondes=parseInt(u);
+  nombre_minutes=Math.floor(nb_secondes/60);
+  vrai_nombre_secondes=nb_secondes%60;
+  nombrefinal=nombre_minutes+':'+vrai_nombre_secondes;
+  minuteur.innerHTML = nombrefinal ;
+}, 1000);

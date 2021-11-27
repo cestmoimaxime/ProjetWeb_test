@@ -68,16 +68,6 @@
 
 <?php 
 include('connect.php');
-$options_str = "";
-$requete="SELECT id , nom FROM icone WHERE nom='Hagrid";
-//echo($requete);
-$result=mysqli_query($link, $requete);
-  while ($ligne = mysqli_fetch_assoc($result)) {
-      $id = $ligne['id'];
-      $nom = $ligne['nom'];
-}
-
-
  ?>
     <script src="carto.js"></script>
     <script src="popup.js"></script>

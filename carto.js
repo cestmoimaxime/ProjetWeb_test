@@ -6,6 +6,9 @@ const $formRecherche = document.getElementById("formRecherche");
 
 let map = L.map('mapid').setView([46.836, 4.5870], 7);
 
+
+
+
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
 	maxZoom: 16
@@ -444,16 +447,15 @@ setInterval( () => {
   nb_secondes=parseInt(u);
   nombre_minutes=Math.floor(nb_secondes/60);
   vrai_nombre_secondes=nb_secondes%60;
+
   zero_minutes='';
   zero_secondes='';
   if (nombre_minutes.toString().length==1 && nombre_minutes!=0){
-    console.log('1 chiffre dans les minutes');
     zero_minutes='0';
   }
   if (nombre_minutes==0){
     zero_minutes='0';
   }
-  console.log(vrai_nombre_secondes);
   if (vrai_nombre_secondes.toString().length==1){
     zero_secondes='0';
   }
@@ -463,3 +465,5 @@ setInterval( () => {
   nombrefinal='00:'+zero_minutes+nombre_minutes+':'+zero_secondes+vrai_nombre_secondes;
   minuteur.innerHTML = nombrefinal ;
 }, 1000);
+
+

@@ -18,7 +18,7 @@ Suédois à museau court : Miss Teigne
 Vert Gallois : Une oreille à rallonge
 Aragog : Riddikulus
 
-Poudlard : Chaque lettre correspond à la première lettre du numéro correspondand. 
+Durmonstrong -> Azkaban : Chaque lettre correspond à la première lettre du numéro correspondand. 
 Donc nous avons : U(n) ; D(eux) ; T(rois) ; Q(uatre) ; C(inq) ; S(ix) ; S(ept) : H(uit) ; N(euf)
 Beauxbatons : 2*x + 0.5*x + 0.25*x + 1 = 100 pour x = 36
-Durmonstrong -> Azkaban : Un hippogryffe mange 140 insectes en 5 jours. Chaque jour, il en mange 3 de plus. Combien en mange-t-il le 5ème jour ? Il en mange 24.
+Poudlard : Un hippogryffe mange 140 insectes en 5 jours. Chaque jour, il en mange 3 de plus. Combien en mange-t-il le 5ème jour ? Il en mange 24.

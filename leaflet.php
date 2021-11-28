@@ -35,7 +35,8 @@
     <div id="overlay" class="overlay">
       <div id="popup" class="popup">
         <h2>Hagrid : <span id="btnClose" class="btnClose">&times;</span></h2>
-        <h4><p> Bonjour jeune sorcier ! J'ai l'honneur de t'annoncer que tu as été admis à l'école Poudlard. Mais avant de faire tes baggages et d'embarquer à bord du Poudlard Express, tu devras remplir une mission. Tu dois trouver les 4 emblèmes des 4 maisons de Poudlard. A chaque fois que tu trouveras un des animaux, tu devras répondre à une question. Attention, tu ne pourras pas accéder au Poudlard Express sans avoir répondu à TOUTES les questions (des réponses justes, n'est ce pas ?). Je te souhaite bon courage !
+        <div id='message_pour_poudlard'>
+        <h4><p> Bonjour jeune sorcier ! J'ai l'honneur de t'annoncer que tu as été admis à l'école Poudlard. Mais avant de faire tes baggages et d'embarquer à bord du Poudlard Express, tu devras remplir une mission. Tu dois trouver les 4 emblèmes des 4 maisons de Poudlard. A chaque fois que tu trouveras un des animaux, tu devras répondre à une question. Attention, tu ne pourras pas accéder au Poudlard Express sans avoir répondu à TOUTES les questions . Je te souhaite bon courage et retrouve moi sur le quai 9/3!
         </p>
         <p id='info_lion'>Gryffondor : Il aime bien traîner du côté où son ancêtre s'est fait battre par Héraclès.</p>
         <p id='info_aigle'>Serdaigle : L'aigle aprrécie particulièrement un parc à thème français.</p>
@@ -44,6 +45,8 @@
         </h4>
       </div>
     </div>
+  </div>
+  
     <div id='mot_de_passe'></div>
     <div id="time">00:00:00</div>
     <div id="message_boutton_blaireau">

@@ -56,7 +56,7 @@ var proposition_reponse=document.getElementById('proposition_reponse');
 var hagrid_valider=document.getElementById('hagrid_valider');
 
 var message_hagrid=document.getElementById('message_hagrid');
-var message_hagrid2=document.getElementById('popup');
+var message_hagrid2=document.getElementById('message_pour_poudlard');
 
 function mess_hag(){
   if (nb_reponses_bonnes==4){
@@ -70,23 +70,18 @@ function mess_hag(){
 hagrid_valider.addEventListener('click', reussir);
 var couche1=1 ;
 var couche2=0;
-
+var couche3=0;
 
 function reussir(){
   if (proposition_reponse.value=='Voldemort' || proposition_reponse.value=='voldemort'){
-   message_hagrid2.innerHTML="<div id='overlay' class='overlay'>\
-   <div id='popup' class='popup'>\
-     <h1>Hagrid : <span id='btnClose' class='btnClose'>&times;</span></h1>\
-     <h2><p>Le conducteur de train étant en méga GDB \
+   message_hagrid2.innerHTML="Voldemort vol un peu moins et est un peu plus mort en 2021...                          Le conducteur de train étant en méga GDB \
 à cause d'une trop grosse consommation de Whisky Pur Feu c'est à toi qu'incombe\
- la tache de conduire tous les enfants à Poudlard,je te rappelle que Poudlard se trouve près du loch Ness\
-     </p>\
-     </h2>\
-   </div>\
- </div>";
+ la tache de conduire tous les enfants à Poudlard,je te rappelle que Poudlard se trouve près du loch Ness ";
    map.removeLayer(première_couche);
     couche1=0;
     couche2=1;
+    $mdp.innerHTML='';
+  
 
   }
 }
@@ -99,13 +94,13 @@ var image1 = L.icon({
   iconAnchor:[16*1.4/2,37*1.4],
   popupAnchor:[-3,-76]
 });
-var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
+var blaireau = L.marker([37.7508,14.9944], { icon: image1 });
 blaireau.bindPopup(message_blaireau);
 
 
 var première_couche = new L.FeatureGroup();
 var deuxième_couche= new L.FeatureGroup();
-
+var troisième_couche= new L.FeatureGroup();
 
 
 première_couche.addLayer(blaireau);
@@ -115,7 +110,7 @@ var compteurb = 0;
 function fonction_blaireau(){
 
   if (sol_blaireau.checked && compteurb==0){
-    $mdp.innerHTML+='em';
+    $mdp.innerHTML+='too';
     compteurb+=1;
     info_blaireau.innerHTML= 'Poufsouffle: Tu as réussi la question du baireau';
     nb_reponses_bonnes+=1;
@@ -144,7 +139,7 @@ valid_serpent.addEventListener("click", fonction_serpent);
 function fonction_serpent(){
  
   if (sol_serpent.checked && compteurs==0){
-    $mdp.innerHTML+='ort';
+    $mdp.innerHTML+='rv';
     compteurs+=1;
     nb_reponses_bonnes+=1;
     info_serpent.innerHTML= 'Serpentard: Tu as réussi la question du serpent';
@@ -169,7 +164,7 @@ première_couche.addLayer(lion);
 valid_lion.addEventListener("click", fonction_lion);
 function fonction_lion(){
   if (sol_lion.checked && compteurl==0){
-    $mdp.innerHTML+='ld';
+    $mdp.innerHTML+='el';
     compteurl+=1;
     nb_reponses_bonnes+=1;
     info_lion.innerHTML= 'Gryffondor: Tu as réussi la question du lion';
@@ -192,13 +187,19 @@ première_couche.addLayer(aigle);
 valid_aigle.addEventListener("click", fonction_aigle);
 function fonction_aigle(){
     if (sol_aigle.checked && compteura==0){
-      $mdp.innerHTML+='vo';
+      $mdp.innerHTML+='md';
       compteura+=1;
       nb_reponses_bonnes+=1;
       info_aigle.innerHTML= "Serdaigle: Tu as réussi la question de l'aigle";
     }
 }
 
+
+/*
+var elem = document.createElement("img");
+elem.src = 'check.jpg';
+$mdp.appendChild(elem);
+*/
 
 
 var valid_vert_gallois=document.getElementById('valider_vert_gallois');
@@ -245,8 +246,6 @@ function fonction_aragog(){
 
 
 
-/* nouvelle couche avec les 4 dragons et Aragog */
-var shelterMarkers_dragon = new L.FeatureGroup();
 
 /* nouvelle couche avec BB, Durmonstrong et Azkaban */
 var shelterMarkers_ecole = new L.FeatureGroup();
@@ -267,7 +266,7 @@ var image6 = L.icon({
   });
 var dragon_chinois=L.marker([23.990,121.013], {icon:image6})
 dragon_chinois.bindPopup(message_boutefeu)
-shelterMarkers_dragon.addLayer(dragon_chinois)
+troisième_couche.addLayer(dragon_chinois)
 
 
 
@@ -302,7 +301,7 @@ var image9 = L.icon({
   });
 var aragog=L.marker([-25.231,134.235], {icon:image9})
 aragog.bindPopup(message_aragog)
-shelterMarkers_dragon.addLayer(aragog)
+troisième_couche.addLayer(aragog)
 
 
 var image10 = L.icon({
@@ -324,7 +323,7 @@ var image11 = L.icon({
 
 var dragon_hongrie=L.marker([47.0068,18.1659], {icon:image11})
 dragon_hongrie.bindPopup(message_magyar);
-shelterMarkers_dragon.addLayer(dragon_hongrie);
+troisième_couche.addLayer(dragon_hongrie);
 
 var image12 = L.icon({
     iconUrl:'vert_gallois.png',
@@ -334,7 +333,7 @@ var image12 = L.icon({
   });
 var dragon_galles=L.marker([52.3852,-3.6966], {icon:image12})
 dragon_galles.bindPopup(message_vert_gallois)
-shelterMarkers_dragon.addLayer(dragon_galles)
+troisième_couche.addLayer(dragon_galles)
 
 var image13 = L.icon({
     iconUrl:'suedois_a_museau_court.png',
@@ -344,7 +343,7 @@ var image13 = L.icon({
   });
 var dragon_suede=L.marker([59.872,17.631], {icon:image13})
 dragon_suede.bindPopup(message_suedois)
-shelterMarkers_dragon.addLayer(dragon_suede)
+troisième_couche.addLayer(dragon_suede)
 
 /* nouvelle couche */
 var shelterMarkers_chaumiere = new L.FeatureGroup();
@@ -381,6 +380,8 @@ map.on('zoomend', function() {
     if (map.getZoom() <8){
             map.removeLayer(première_couche);
             map.removeLayer(deuxième_couche);
+            map.removeLayer(troisième_couche);
+
     }
     else {
       if (couche1==1){;
@@ -388,6 +389,9 @@ map.on('zoomend', function() {
       }
       if (couche2==1){
              map.addLayer(deuxième_couche);
+      }
+      if (couche3==1){
+            map.addLayer(troisième_couche);
       }
         }
 })
@@ -413,6 +417,8 @@ poudlard_express.on('dragend', function (e) {
 
    if (map.distance([lat_express,lng_express],[56.9745, -4.4125])<15000){
      console.log('bravo');
+     couche3=1;
+     couche2=0;
 
    }
 });

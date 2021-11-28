@@ -4,11 +4,10 @@
 }
 
 html {
-    background-color: white;
-    background-image: url(fond_ecran4.jpg);
+    background-color: rgb(24, 15, 107);
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover
     overflow: hidden;
 }
 
@@ -343,3 +342,4 @@ form input {
     color: rgb(6, 158, 14);
     font-size: xx-large;
 }
+

@@ -276,7 +276,7 @@ form input {
     position: relative;
     top: -200px;
     left: 30px;
-  background-image: url(hagrid.jpg);
+  background-image: url(hagrid.png);
   padding:1em 2em;
   font-size:10pt;
   color: #000;
@@ -294,7 +294,8 @@ form input {
   top:0px;
   background-color:rgba(0,0,0,0.5);
   width:50%;
-  height:0%;
+  height:
+  0%;
   display:none;
 
 }

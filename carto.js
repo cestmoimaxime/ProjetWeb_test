@@ -266,7 +266,7 @@ var messagearagog= '<div id="message_boutton_aragog">\
 
 
 var image3 = L.icon({
-  iconUrl:'serdaigle_aigle.jpg',
+  iconUrl:'serdaigle_aigle.png',
   iconSize:[32,37],
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
@@ -277,7 +277,7 @@ première_couche.addLayer(aigle);
 
 
 var image4 = L.icon({
-  iconUrl:'gryffondor_lion.jpg',
+  iconUrl:'gryffondor_lion.png',
   iconSize:[32,37],
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
@@ -295,14 +295,14 @@ var shelterMarkers_ecole = new L.FeatureGroup();
 
 
 var image5 = L.icon({
-  iconUrl:'hagrid.jpg',
+  iconUrl:'hagrid.png',
   iconSize:[32,37],
   iconAnchor:[16,37],
   popupAnchor:[-3,-76]
 });
 
 var image6 = L.icon({
-    iconUrl:'boutefeu_chinois.jpg',
+    iconUrl:'bdf.png',
     iconSize:[128,148],
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
@@ -318,7 +318,7 @@ var messageDurmstrong= '<div id="message_boutton_Durmstrong">\
 
 
 var image7 = L.icon({
-    iconUrl:'durmstrang.jpg',
+    iconUrl:'durmstrang.png',
     iconSize:[128,148],
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
@@ -351,7 +351,7 @@ prison.bindPopup(messagePrison)
 shelterMarkers_ecole.addLayer(prison)
 
 var image9 = L.icon({
-    iconUrl:'aragog.jpg',
+    iconUrl:'aragog.png',
     iconSize:[128,148],
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
@@ -382,7 +382,7 @@ var messageBB= '<div id="message_boutton_BB">\
 
 
 var image10 = L.icon({
-    iconUrl:'beauxbatons.jpg',
+    iconUrl:'beauxbatons.png',
     iconSize:[128,148],
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
@@ -392,7 +392,7 @@ beauxbatons.bindPopup(messageBB);
 shelterMarkers_ecole.addLayer(beauxbatons)
 
 var image11 = L.icon({
-    iconUrl:'magyar_a_pointe.jpg',
+    iconUrl:'magyar_a_pointe.png',
     iconSize:[128,148],
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
@@ -403,7 +403,7 @@ dragon_hongrie.bindPopup(messagemagyar);
 shelterMarkers_dragon.addLayer(dragon_hongrie);
 
 var image12 = L.icon({
-    iconUrl:'vert_gallois.jpg',
+    iconUrl:'vert_gallois.png',
     iconSize:[128,148],
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
@@ -413,7 +413,7 @@ dragon_galles.bindPopup(messagevertgallois)
 shelterMarkers_dragon.addLayer(dragon_galles)
 
 var image13 = L.icon({
-    iconUrl:'suedois_a_museau_court.jpg',
+    iconUrl:'suedois_a_museau_court.png',
     iconSize:[128,148],
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
@@ -449,7 +449,7 @@ var messagePoudlard= '<div id="message_boutton_poudlard">\
 
 
 var image15 = L.icon({
-    iconUrl:'poudlard.jpg',
+    iconUrl:'poudlard.png',
     iconSize:[128,148],
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]

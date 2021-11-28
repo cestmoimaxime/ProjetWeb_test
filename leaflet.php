@@ -156,11 +156,7 @@
 
 
   <div id="message_boutton_Durmstrang">
-    <h1>Bonjour petit sorcier. Désolé de t être déplacé pour rien, mais Igor Karkaroff, le directeur, n est pas présent. Il séjourne quelques temps à Azkaban. Tu le trouveras là-bas si tu oses y aller. Bonne chance (tu en auras besoin...) !</h1>
-    </div>
-
-
-    <div id="message_boutton_poudlard">
+    <h1>Bonjour petit sorcier. Désolé de t'être déplacé pour rien, mais Igor Karkaroff, le directeur, n'est pas présent. Il séjourne quelques temps à Azkaban. Tu le trouveras là-bas si tu oses y aller. Mais avant de partir répond à ma question</h1>
     <h1>Un hippogryffe mange 140 insectes en 5 jours. Chaque jour, il en mange 3 de plus. Combien en mange-t-il le 5ème jour ?</h1>
     <label>22<input type="radio" name="news" value="0"></label>
     <label>140<input type="radio" name="news" value="0"></label>
@@ -169,7 +165,10 @@
     <button id="valider_poudlard" type="button">
       Valider la réponse
     </button>
-  </div>
+  </div>  
+
+
+    
 
   <div id="message_boutton_BB">
     <h1>Quel est le nombre qui est tel que si on le multiplie par deux, on lui ajoute sa moitié puis son quart et enfin 1, donnera 100 ?</h1>

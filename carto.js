@@ -23,9 +23,9 @@ var message_suedois=document.getElementById('message_boutton_suedois');
 var message_magyar=document.getElementById('message_boutton_magyar');
 var message_boutefeu=document.getElementById('message_boutton_boutefeu');
 var message_aragog=document.getElementById('message_boutton_aragog');
-var message_Durmstrang=document.getElementById('message_button_Durmstrang');
+var message_Durmstrang=document.getElementById('message_boutton_Durmstrang');
 var message_prison=document.getElementById('message_boutton_prison');
-var message_BB=document.getElementById('message_button_BB');
+var message_BB=document.getElementById('message_boutton_BB');
 
 
 var sol_vert_gallois=document.getElementById('bonne_reponse_vert_gallois');
@@ -110,6 +110,8 @@ var première_couche = new L.FeatureGroup();
 var deuxième_couche= new L.FeatureGroup();
 var troisième_couche= new L.FeatureGroup();
 var quatrième_couche= new L.FeatureGroup();
+var cinquième_couche= new L.FeatureGroup();
+
 
 première_couche.addLayer(blaireau);
 valid_blaireau.addEventListener("click", fonction_blaireau);
@@ -222,6 +224,37 @@ valid_boutefeu.addEventListener("click", fonction_boutefeu);
 valid_aragog.addEventListener("click", fonction_aragog);
 
 
+var image16=L.icon({
+  iconUrl:'poudlard_express.png',
+  iconSize:[128,70],
+  iconAnchor:[64,70],
+  popupAnchor:[-3,-76]
+  });
+
+var poudlard_express=L.marker([51.53319,-0.12418], {icon:image16 , draggable: true});
+poudlard_express.bindPopup('<h1>En route pour Poudlard !</h1>');
+deuxième_couche.addLayer(poudlard_express);
+
+var lat_express= null;
+var lng_express= null;
+
+poudlard_express.on('dragend', function (e) {
+   lat_express = poudlard_express.getLatLng().lat;
+   lng_express = poudlard_express.getLatLng().lng;
+
+   if (map.distance([lat_express,lng_express],[56.9745, -4.4125])<15000){
+     console.log('bravo');
+     couche3=1;
+     couche2=0;
+     message_hagrid2.innerHTML="<div>J'ai appris que tu voulais faire BSPCT si tu avais pas été accepté à Poudlard. Si tu me trouves ces dragons dans leurs pays natal:</div>\
+     <p>-Un boutefeu chinois </p>\
+     <p>-Un suédois à museau court</p>\
+     <p>-Un magyar à pointe </p>\
+     <p>-Un vert gallois</p>\
+     <p>-Et mon cher Aragog qui est reparti dans le pays qui possède la plus grande barrière de corail au monde</p>\
+     <p> Je te fais membre du club de zoologie magique</p>";
+   }
+});
 
 
 
@@ -418,7 +451,7 @@ var image14 = L.icon({
     popupAnchor:[-3,-76]
   });
 var maison=L.marker([50.1027, -5.3892], {icon:image14})
-shelterMarkers_chaumiere.addLayer(maison)
+cinquième_couche.addLayer(maison)
 
 
 
@@ -458,41 +491,12 @@ map.on('zoomend', function() {
       if (couche4==1){
         map.addLayer(quatrième_couche);
       }
-})
+    }
+}
+)
 
 
 
-var image16=L.icon({
-  iconUrl:'poudlard_express.png',
-  iconSize:[128,70],
-  iconAnchor:[64,70],
-  popupAnchor:[-3,-76]
-  });
-
-var poudlard_express=L.marker([51.53319,-0.12418], {icon:image16 , draggable: true});
-poudlard_express.bindPopup('<h1>En route pour Poudlard !</h1>');
-deuxième_couche.addLayer(poudlard_express);
-
-var lat_express= null;
-var lng_express= null;
-
-poudlard_express.on('dragend', function (e) {
-   lat_express = poudlard_express.getLatLng().lat;
-   lng_express = poudlard_express.getLatLng().lng;
-
-   if (map.distance([lat_express,lng_express],[56.9745, -4.4125])<15000){
-     console.log('bravo');
-     couche3=1;
-     couche2=0;
-     message_hagrid2.innerHTML="<div>J'ai appris que tu voulais faire BSPCT si tu avais pas été accepté à Poudlard. Si tu me trouves ces dragons dans leurs pays natal:</div>\
-     <p>-Un boutefeu chinois </p>\
-     <p>-Un suédois à museau court</p>\
-     <p>-Un magyar à pointe </p>\
-     <p>-Un vert gallois</p>\
-     <p>-Et mon cher Aragog qui est reparti dans le pays qui possède la plus grande barrière de corail au monde</p>\
-     <p> Je te fais membre du club de zoologie magique</p>";
-   }
-});
 
 
 let heure_debut=new Date();

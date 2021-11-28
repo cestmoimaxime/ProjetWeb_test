@@ -279,7 +279,7 @@ form input {
     left: 30px;
   background-image: url(hagrid.jpg);
   padding:1em 2em;
-  font-size:14pt;
+  font-size:10pt;
   color: #000;
   cursor:pointer;
   width: 150px;
@@ -294,8 +294,8 @@ form input {
   left:0px;
   top:0px;
   background-color:rgba(0,0,0,0.5);
-  width:100%;
-  height:100%;
+  width:50%;
+  height:0%;
   display:none;
 
 }
@@ -330,7 +330,7 @@ form input {
     font-size: xx-large;
     background-color: #615e66;
     position: relative;
-    top: -550px;
+    top: -450px;
     left: 0px;
 }
 
@@ -345,7 +345,7 @@ form input {
 
 #time{
     position: relative;
-    top: -600px;
+    top: -400px;
     left: -150px;
     color: rgb(6, 158, 14);
     font-size: xx-large;

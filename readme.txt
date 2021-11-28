@@ -5,7 +5,7 @@ Installations requises pour le bon fonctionnement du jeu :
 
 telecharger MAMP
 aller sur le lien github
-télécharger le dossier zip
+télécharger le dossier zip via l'onglet 'CODE'
 mettre le dossier préalablement dézippé dans C:\MAMP\htdocs et appeller le Projet_Web
 aller dans http://localhost/phpMyAdmin/ 
 si besoin creer un username='username' et un mot de passe ='motdepasse'

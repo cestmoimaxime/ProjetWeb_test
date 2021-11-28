@@ -7,26 +7,16 @@ const $formRecherche = document.getElementById("formRecherche");
 let map = L.map('mapid').setView([46.836, 4.5870], 7);
 
 
-var OpenStreetMap_France = L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
 	maxZoom: 20,
 	attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
-
-
-
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
 	maxZoom: 12
 }).addTo(map);
 
-
-
-
-
-
-
-
+/*
 navigator.geolocation.getCurrentPosition(function (position) {
     let markerCurrentPos = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
     markerCurrentPos.bindPopup("Vous êtes ici.");
@@ -38,7 +28,7 @@ map.on('mousemove', leafletEvent => {
     $coords.style.top = `${leafletEvent.originalEvent.clientY}px`;
     $coords.style.left = `${leafletEvent.originalEvent.clientX}px`;
 });
-
+*/
 
 /*var circle = L.circle([51.508, -0.11], {
     color: 'red',
@@ -76,6 +66,7 @@ var sol_aragog=document.getElementById('bonne_reponse_aragog');
 
 */
 var $mdp=document.getElementById('mot_de_passe');
+
 var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
 var valid_blaireau=document.getElementById('valider_blaireau');
 let message_blaireau=document.getElementById('message_boutton_blaireau');
@@ -104,6 +95,10 @@ function fonction_blaireau(){
   }
 }
 
+
+
+
+
 let message_serpent=document.getElementById('message_boutton_serpent');
 var sol_serpent=document.getElementById('bonne_reponse_serpent');
 var valid_serpent=document.getElementById('valider_serpent');
@@ -119,12 +114,9 @@ serpent.bindPopup(message_serpent);
 shelterMarkers.addLayer(serpent);
 valid_serpent.addEventListener("click", fonction_serpent);
 serpent.on("click", rendreinvisibles );
-
 function rendreinvisibles(){
   message_serpent.style.visibility='visible';
 }
-
-
 function fonction_serpent(){
  
   if (sol_serpent.checked && compteurs==0){
@@ -133,6 +125,10 @@ function fonction_serpent(){
 
   }
 }
+
+
+
+
 /*
 function fonction_aigle(){
     if (sol_aigle.checked){

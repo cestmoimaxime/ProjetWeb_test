@@ -56,23 +56,38 @@ var proposition_reponse=document.getElementById('proposition_reponse');
 var hagrid_valider=document.getElementById('hagrid_valider');
 
 var message_hagrid=document.getElementById('message_hagrid');
+var message_hagrid2=document.getElementById('popup');
 
-/*
 function mess_hag(){
   if (nb_reponses_bonnes==4){
-    return "<h1>Tu n'as pas encore répondu à toutes les questions </h1> " ; 
+    return message_hagrid ; 
   }
   else {
-    return message_hagrid ;
+    return "<h1>Tu n'as pas encore répondu à toutes les questions </h1> " ;
   }
 }
-*/
+
 hagrid_valider.addEventListener('click', reussir);
+var couche1=1 ;
+var couche2=0;
+
 
 function reussir(){
   if (proposition_reponse.value=='Voldemort' || proposition_reponse.value=='voldemort'){
-   message_hagrid="C'est tout à fait ça";
+   message_hagrid2.innerHTML="<div id='overlay' class='overlay'>\
+   <div id='popup' class='popup'>\
+     <h1>Hagrid : <span id='btnClose' class='btnClose'>&times;</span></h1>\
+     <h2><p>Le conducteur de train étant en méga GDB \
+à cause d'une trop grosse consommation de Whisky Pur Feu c'est à toi qu'incombe\
+ la tache de conduire tous les enfants à Poudlard,je te rappelle que Poudlard se trouve près du loch Ness\
+     </p>\
+     </h2>\
+   </div>\
+ </div>";
    map.removeLayer(première_couche);
+    couche1=0;
+    couche2=1;
+
   }
 }
 
@@ -86,7 +101,13 @@ var image1 = L.icon({
 });
 var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
 blaireau.bindPopup(message_blaireau);
+
+
 var première_couche = new L.FeatureGroup();
+var deuxième_couche= new L.FeatureGroup();
+
+
+
 première_couche.addLayer(blaireau);
 valid_blaireau.addEventListener("click", fonction_blaireau);
 var compteurs=0;
@@ -339,8 +360,6 @@ var maison=L.marker([50.1027, -5.3892], {icon:image14})
 shelterMarkers_chaumiere.addLayer(maison)
 
 
-var messagePoudlard= ''; 
-
 
 var image15 = L.icon({
     iconUrl:'poudlard.png',
@@ -348,23 +367,57 @@ var image15 = L.icon({
     iconAnchor:[64,148],
     popupAnchor:[-3,-76]
   });
+
+
 var poudlard=L.marker([56.9745, -4.4125], {icon:image15})
-poudlard.bindPopup(messagePoudlard)
-première_couche.addLayer(poudlard)
+poudlard.bindPopup('message_Poudlard')
+deuxième_couche.addLayer(poudlard)
 
 
-var hagrid = L.marker([51.53319,-0.12418], {icon: image5}).bindPopup(message_hagrid);
+var hagrid = L.marker([51.53319,-0.12418], {icon: image5}).bindPopup(mess_hag);
 première_couche.addLayer(hagrid);
 
 map.on('zoomend', function() {
     if (map.getZoom() <8){
             map.removeLayer(première_couche);
-
+            map.removeLayer(deuxième_couche);
     }
     else {
+      if (couche1==1){;
             map.addLayer(première_couche);
+      }
+      if (couche2==1){
+             map.addLayer(deuxième_couche);
+      }
         }
 })
+
+
+var image16=L.icon({
+  iconUrl:'poudlard_express.png',
+  iconSize:[128,70],
+  iconAnchor:[64,70],
+  popupAnchor:[-3,-76]
+  });
+
+var poudlard_express=L.marker([51.53319,-0.12418], {icon:image16 , draggable: true});
+poudlard_express.bindPopup('<h1>En route pour Poudlard !</h1>');
+deuxième_couche.addLayer(poudlard_express);
+
+var lat_express= null;
+var lng_express= null;
+
+poudlard_express.on('dragend', function (e) {
+   lat_express = poudlard_express.getLatLng().lat;
+   lng_express = poudlard_express.getLatLng().lng;
+
+   if (map.distance([lat_express,lng_express],[56.9745, -4.4125])<15000){
+     console.log('bravo');
+
+   }
+});
+
+
 /*
 map.removeLayer(shelterMarkers_dragon);
 map.removeLayer(shelterMarkers_ecole);

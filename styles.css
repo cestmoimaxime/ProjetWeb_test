@@ -284,6 +284,7 @@ form input {
   cursor:pointer;
   width: 150px;
   height: 305px ;
+  
 }
 .btnPopup:hover{
   background-color: gainsboro;

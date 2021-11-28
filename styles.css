@@ -236,7 +236,7 @@ form input {
 #mapid /*position de la carte*/{ 
     position: relative;
     left: 00px;
-    bottom: 00px;
+    bottom: 80px;
     height: 700px;
     width: 1300px;
 }
@@ -329,8 +329,8 @@ form input {
     font-size: xx-large;
     background-color: #615e66;
     position: relative;
-    top: -890px;
-    left: 1300px;
+    top: -550px;
+    left: 0px;
 }
 
 #message_boutton_blaireau{
@@ -344,8 +344,8 @@ form input {
 
 #time{
     position: relative;
-    top: -850px;
-    left: 1100px;
+    top: -600px;
+    left: -150px;
     color: rgb(6, 158, 14);
     font-size: xx-large;
 }

@@ -66,6 +66,52 @@
         </button>
         </div> 
 
+
+
+
+        <div id="message_boutton_aigle">
+<h1>Quel évènement important s’est produit l’année de la création du Puy du Fou ?</h1>
+<label>Le renouvellement des accords bilatéraux Andorre-Moldavie<input type="radio" name="news" value="0"></label>
+<label>Abolition de la peine de mort<input type="radio" name="news" value="0"></label>
+<label>La chute du mur de Berlin<input id = "bonne_reponse_aigle" type="radio" name="news" value="1"></label>
+<label>La création du Puy du Fou<input type="radio" name="news" value="0"></label>
+<button id="valider_aigle" type="button">
+  Valider la réponse
+  </button>
+</div>
+
+
+<div id="message_boutton_lion">
+<h1>Quel animal ne constitue pas une épreuve des 12 travaux d’Héraklès ?</h1>
+<label>Le sanglier<input type="radio" name="news" value="0"></label>
+<label>La biche<input type="radio" name="news" value="0"></label>
+<label>L ours<input id="bonne_reponse_lion" type="radio" name="news" value="1"></label>
+<label>La jument<input type="radio" name="news" value="0"></label>
+<button id="valider_lion" type="button">
+  Valider la réponse
+</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php 
 include('connect.php');
 

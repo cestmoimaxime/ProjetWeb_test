@@ -293,6 +293,7 @@ poudlard_express.on('dragend', function (e) {
      console.log('bravo');
      couche3=1;
      couche2=0;
+     
      message_hagrid2.innerHTML="<div>J'ai appris que tu voulais faire BSPCT si tu avais pas été accepté à Poudlard. Si tu me trouves ces dragons dans leurs pays natal:</div>\
      <p>-Un boutefeu chinois </p>\
      <p>-Un suédois à museau court</p>\
@@ -300,6 +301,7 @@ poudlard_express.on('dragend', function (e) {
      <p>-Un vert gallois</p>\
      <p>-Et mon cher Aragog qui est reparti dans le pays qui possède la plus grande barrière de corail au monde</p>\
      <p> Je te fais membre du club de zoologie magique</p>";
+     overlay.style.display='block';
    }
 });
 
@@ -499,11 +501,10 @@ var image14 = L.icon({
   });
 var maison=L.marker([50.1027, -5.3892], {icon:image14})
 maison.addEventListener('click',function(){
-  var temps_final= minuteur;
+  var temps_final= nombrefinal;
   //window.location.href="leaflet.php?temps_final=minuteur";
   document.cookie="temps_final=minuteur";
-  console.log(temps_final);
-  message_hagrid2.innerHTML='<li id="menuElement"><a href="ecran_final.html">Finir le jeu </a></li>';
+  message_hagrid2.innerHTML='<h1>Tu as finit le jeu en ' +temps_final +'<li id="menuElement"><a href="ecran_final.html">Finir le jeu </a></li>';
   overlay.style.display='block';
 })
 cinquième_couche.addLayer(maison)

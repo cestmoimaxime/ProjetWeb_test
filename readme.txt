@@ -1,3 +1,6 @@
+
+PARTIE PREAMBULAIRE:
+
 Installations requises pour le bon fonctionnement du jeu :
 
 telecharger MAMP
@@ -22,9 +25,11 @@ lancer le jeu en tapant http://localhost/Projet_Web/index.html
 
 Le jeu est lancé et je croise les doigts pour que ça marche
 
+Même si les connexions sont faites et que des entrées peuvent être faites manuellement dans la bdd joueurs dans le leaflet.php, le code n'est pas au stade ou on peut 
+enregistrer les données des joueurs 
 
 
-
+PARTIE JEU:
 
 Ou se trouvent les icones?
 

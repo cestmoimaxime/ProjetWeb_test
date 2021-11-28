@@ -9,7 +9,7 @@ html {
     background-repeat: no-repeat;    
     background-size: cover ;
     background-image: url("R.jpg");
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 body {

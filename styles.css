@@ -234,8 +234,11 @@ form input {
 }
 
 #mapid /*position de la carte*/{ 
+    position: relative;
+    left: 00px;
+    bottom: 00px;
     height: 700px;
-    width: 1200px;
+    width: 1300px;
 }
 
 #coords {
@@ -269,8 +272,10 @@ form input {
     }
 }
 
-.btnPopup{
-  background-color: orangered;
+.btnPopup{ /* popup Hagrid */
+    position: relative;
+    top: -200px;
+    left: 30px;
   background-image: url(hagrid.jpg);
   padding:1em 2em;
   font-size:14pt;
@@ -323,6 +328,9 @@ form input {
     font-family: Arial;
     font-size: xx-large;
     background-color: #615e66;
+    position: relative;
+    top: -890px;
+    left: 1300px;
 }
 
 #message_boutton_blaireau{
@@ -335,6 +343,9 @@ form input {
 }
 
 #time{
+    position: relative;
+    top: -850px;
+    left: 1100px;
     color: rgb(6, 158, 14);
     font-size: xx-large;
 }

@@ -85,7 +85,7 @@
 <h1>Quel animal ne constitue pas une épreuve des 12 travaux d’Héraklès ?</h1>
 <label>Le sanglier<input type="radio" name="news" value="0"></label>
 <label>La biche<input type="radio" name="news" value="0"></label>
-<label>L ours<input id="bonne_reponse_lion" type="radio" name="news" value="1"></label>
+<label>L'ours<input id="bonne_reponse_lion" type="radio" name="news" value="1"></label>
 <label>La jument<input type="radio" name="news" value="0"></label>
 <button id="valider_lion" type="button">
   Valider la réponse
@@ -93,20 +93,114 @@
 </div>
 
 
+<div id="message_boutton_vert_gallois">
+<h1>Que mange Pattenrond au début de "Harry Potter et l ordre du Phénix" ?</h1>
+<label>Une souris<input type="radio" name="news" value="0"></label>
+<label>Une oreille à rallonge<input id="bonne_reponse_vert_gallois" type="radio" name="news" value="1"></label>
+<label>Croûtard<input  type="radio" name="news" value="0"></label>
+<label>Le devoir de Ron<input type="radio" name="news" value="0"></label>
+<button id="valider_vert_gallois" type="button">
+  Valider la réponse
+</button>
+</div>
+
+
+<div id="message_boutton_suedois">
+<h1>Comment se nomme le chat de Rusard ?</h1>
+<label>Miss Teigne<input id="bonne_reponse_suedois" type="radio" name="news" value="1"></label>
+<label>Arold<input type="radio" name="news" value="0"></label>
+<label>Hedwige<input type="radio" name="news" value="0"></label>
+<label>Trevor<input type="radio" name="news" value="0"></label>
+<button id="valider_suedois" type="button">
+  Valider la réponse
+</button>
+</div>
+
+<div id="message_boutton_magyar">
+<h1>Comment se nomment les parents de Ron ?</h1>
+<label>Molly et George<input type="radio" name="news" value="0"></label>
+<label>Molly et Arthur<input id="bonne_reponse_magyar" type="radio" name="news" value="1"></label>
+<label>Lily et Arthur<input type="radio" name="news" value="0"></label>
+<label>Lily et James<input type="radio" name="news" value="0"></label>
+<button id="valider_magyar" type="button">
+  Valider la réponse
+</button>
+</div>
+
+<div id="message_boutton_boutefeu">
+      <h1>Quelle est la seconde personne qui aide Harry Potter à résoudre l énigme de l oeuf dans "La coupe de feu" après Cédric Diggory ?</h1>
+      <label>Dumbledore<input type="radio" name="news" value="0"></label>
+      <label>Hermione Granger<input type="radio" name="news" value="0"></label>
+      <label>Mimi Geignarde<input id="bonne_reponse_boutefeu" type="radio" name="news" value="1"></label>
+      <label>Neville Londubat<input type="radio" name="news" value="0"></label>
+      <button id="valider_boutefeu" type="button">
+        Valider la réponse
+      </button>
+    </div>
+
+    <div id="message_boutton_aragog">
+    <h1>Un épouvantard surgit devant toi ! Comment te protèges-tu ?</h1>
+    <label>Accio<input type="radio" name="news" value="0"></label>
+    <label>Expelliarmus<input type="radio" name="news" value="0"></label>
+    <label>Stupefix<input type="radio" name="news" value="0"></label>
+    <label>Riddikulus<input id="bonne_reponse_aragog" type="radio" name="news" value="1"></label>
+    <button id="valider_aragog" type="button">
+      Valider la réponse
+    </button>
+  </div>
+
+
+  <div id="message_boutton_Durmstrang">
+    <h1>Bonjour petit sorcier. Désolé de t être déplacé pour rien, mais Igor Karkaroff, le directeur, n est pas présent. Il séjourne quelques temps à Azkaban. Tu le trouveras là-bas si tu oses y aller. Bonne chance (tu en auras besoin...) !</h1>
+    </div>
+
+
+    <div id="message_boutton_poudlard">
+    <h1>Un hippogryffe mange 140 insectes en 5 jours. Chaque jour, il en mange 3 de plus. Combien en mange-t-il le 5ème jour ?</h1>
+    <label>22<input type="radio" name="news" value="0"></label>
+    <label>140<input type="radio" name="news" value="0"></label>
+    <label>20<input type="radio" name="news" value="0"></label>
+    <label>24<input id="bonne_reponse_poudlard" type="radio" name="news" value="1"></label>
+    <button id="valider_poudlard" type="button">
+      Valider la réponse
+    </button>
+  </div>
+
+  <div id="message_boutton_BB">
+    <h1>Quel est le nombre qui est tel que si on le multiplie par deux, on lui ajoute sa moitié puis son quart et enfin 1, donnera 100 ?</h1>
+    <label>Flemme de calculer<input type="radio" name="news" value="0"></label>
+    <label>35<input type="radio" name="news" value="0"></label>
+    <label>8<input type="radio" name="news" value="0"></label>
+    <label>36<input id="bonne_reponse_BB" type="radio" name="news" value="1"></label>
+    <button id="valider_BB" type="button">
+      Valider la réponse
+    </button>
+  </div>
+
+
+  <div id="message_boutton_aragog">\
+<h1>Un épouvantard surgit devant toi ! Comment te protèges-tu ?</h1>\
+<label>Accio<input type="radio" name="news" value="0"></label>\
+<label>Expelliarmus<input type="radio" name="news" value="0"></label>\
+<label>Stupefix<input type="radio" name="news" value="0"></label>\
+<label>Riddikulus<input id="bonne_reponse_aragog" type="radio" name="news" value="1"></label>\
+<button id="valider_aragog" type="button">\
+  Valider la réponse\
+</button>\
+</div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+<div id="message_boutton_prison">\
+    <h1>Complète cette suite logique : U ; D ; T ; Q ; C ; S ; S ; ? ; ?</h1>\
+    <label>K ; L<input type="radio" name="news" value="0"></label>\
+    <label>R ; S<input type="radio" name="news" value="0"></label>\
+    <label>U ; Q<input type="radio" name="news" value="0"></label>\
+    <label>H ; N<input id="bonne_reponse_aragog" type="radio" name="news" value="1"></label>\
+    <button id="valider_prison" type="button">\
+      Valider la réponse\
+    </button>\
+  </div>
 
 
 

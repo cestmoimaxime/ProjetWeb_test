@@ -36,8 +36,12 @@ var sol_aragog=document.getElementById('bonne_reponse_aragog');
 
 
 var $mdp=document.getElementById('mot_de_passe');
-
-
+var compteur_drag=0;
+var dragh=0;
+var drags=0;
+var dragg=0;
+var dragc=0;
+var draga=0;
 
 let info_blaireau=document.getElementById('info_blaireau');
 let info_aigle=document.getElementById('info_aigle');
@@ -58,6 +62,12 @@ var hagrid_valider=document.getElementById('hagrid_valider');
 var message_hagrid=document.getElementById('message_hagrid');
 var message_hagrid2=document.getElementById('message_pour_poudlard');
 
+
+var overlay = document.getElementById('overlay');
+
+
+
+
 function mess_hag(){
   if (nb_reponses_bonnes==4){
     return message_hagrid ; 
@@ -71,21 +81,19 @@ hagrid_valider.addEventListener('click', reussir);
 var couche1=1 ;
 var couche2=0;
 var couche3=0;
+var couche4=0;
 
 function reussir(){
   if (proposition_reponse.value=='Voldemort' || proposition_reponse.value=='voldemort'){
-   message_hagrid2.innerHTML="Voldemort vol un peu moins et est un peu plus mort en 2021...                          Le conducteur de train étant en méga GDB \
+   message_hagrid2.innerHTML="Voldemort vole un peu moins et est un peu plus mort en 2021... Le conducteur de train étant en méga GDB \
 à cause d'une trop grosse consommation de Whisky Pur Feu c'est à toi qu'incombe\
  la tache de conduire tous les enfants à Poudlard,je te rappelle que Poudlard se trouve près du loch Ness ";
    map.removeLayer(première_couche);
     couche1=0;
     couche2=1;
     $mdp.innerHTML='';
-  
-
   }
 }
-
 
 
 var image1 = L.icon({
@@ -101,7 +109,7 @@ blaireau.bindPopup(message_blaireau);
 var première_couche = new L.FeatureGroup();
 var deuxième_couche= new L.FeatureGroup();
 var troisième_couche= new L.FeatureGroup();
-
+var quatrième_couche= new L.FeatureGroup();
 
 première_couche.addLayer(blaireau);
 valid_blaireau.addEventListener("click", fonction_blaireau);
@@ -201,7 +209,6 @@ elem.src = 'check.jpg';
 $mdp.appendChild(elem);
 */
 
-
 var valid_vert_gallois=document.getElementById('valider_vert_gallois');
 var valid_suedois=document.getElementById('valider_suedois');
 var valid_magyar=document.getElementById('valider_magyar');
@@ -214,27 +221,86 @@ valid_magyar.addEventListener("click", fonction_magyar);
 valid_boutefeu.addEventListener("click", fonction_boutefeu);
 valid_aragog.addEventListener("click", fonction_aragog);
 
+
+
+
+
 function fonction_vert_gallois(){
-    if (sol_vert_gallois.checked){
-        console.log('Bravo')
+    if (sol_vert_gallois.checked && dragg==0){
+      compteur_drag+=1;
+        $mdp.innerHTML=compteur_drag+'/5' ;
+      dragg=1;
+    }
+    if (compteur_drag==5){
+      message_hagrid2.innerHTML=" Tu es décidément très doué, prend ce livre pour écrire toutes les observations que tu t'es fait pendant ce voyage\
+                      et va le faire signer par les directeurs de Durmstrang et Beauxbatons ";
+      overlay.style.display = 'block';
+      map.removeLayer(troisième_couche);
+    couche3=0;
+    couche4=1;
+
     }
 }
 function fonction_suedois(){
-    if (sol_suedois.checked){
-        console.log('Bravo')
+    if (sol_suedois.checked && drags==0){
+      compteur_drag+=1;
+      $mdp.innerHTML=compteur_drag+'/5' ;
+      drags+=1;
+    }
+    if (compteur_drag==5){
+      message_hagrid2.innerHTML=" Tu es décidément très doué, prend ce livre pour écrire toutes les observations que tu t'es fait pendant ce voyage\
+                      et va le faire signer par les directeurs de Durmstrang et Beauxbatons ";
+      overlay.style.display = 'block';
+      map.removeLayer(troisième_couche);
+    couche3=0;
+    couche4=1;
+
     }
 }function fonction_magyar(){
-    if (sol_magyar.checked){
-        console.log('Bravo')
+    if (sol_magyar.checked && dragh==0){
+      compteur_drag+=1
+      $mdp.innerHTML=compteur_drag+'/5' ;
+      dragh+=1;
+    }
+    if (compteur_drag==5){
+      message_hagrid2.innerHTML=" Tu es décidément très doué, prend ce livre pour écrire toutes les observations que tu t'es fait pendant ce voyage\
+                      et va le faire signer par les directeurs de Durmstrang et Beauxbatons ";
+      overlay.style.display = 'block';
+      map.removeLayer(troisième_couche);
+    couche3=0;
+    couche4=1;
+
     }
 }function fonction_boutefeu(){
-    if (sol_boutefeu.checked){
-        console.log('Bravo')
+    if (sol_boutefeu.checked && dragc==0){
+      compteur_drag+=1;
+      $mdp.innerHTML=compteur_drag+'/5' ;
+      dragc+=1;
+    }
+    if (compteur_drag==5){
+      message_hagrid2.innerHTML=" Tu es décidément très doué, prend ce livre pour écrire toutes les observations que tu t'es fait pendant ce voyage\
+                      et va le faire signer par les directeurs de Durmstrang et Beauxbatons ";
+      overlay.style.display = 'block';
+      map.removeLayer(troisième_couche);
+    couche3=0;
+    couche4=1;
+
     }
 }
 function fonction_aragog(){
-  if (sol_aragog.checked){
-      console.log('Bravo')
+  if (sol_aragog.checked && draga==0){
+    compteur_drag+=1;
+      $mdp.innerHTML=compteur_drag+'/5' ;
+    draga+=1;
+  }
+  if (compteur_drag==5){
+    message_hagrid2.innerHTML=" Tu es décidément très doué, prend ce livre pour écrire toutes les observations que tu t'es fait pendant ce voyage\
+                      et va le faire signer par les directeurs de Durmstrang et Beauxbatons ";
+    overlay.style.display = 'block';
+    map.removeLayer(troisième_couche);
+    couche3=0;
+    couche4=1;
+
   }
 }
 
@@ -247,8 +313,6 @@ function fonction_aragog(){
 
 
 
-/* nouvelle couche avec BB, Durmonstrong et Azkaban */
-var shelterMarkers_ecole = new L.FeatureGroup();
 
 
 var image5 = L.icon({
@@ -278,7 +342,7 @@ var image7 = L.icon({
   });
 var ecole_russe=L.marker([59.008,59.139], {icon:image7})
 ecole_russe.bindPopup(message_Durmstrang)
-shelterMarkers_ecole.addLayer(ecole_russe)
+quatrième_couche.addLayer(ecole_russe)
 
 
 
@@ -291,7 +355,7 @@ var image8 = L.icon({
 
 var prison=L.marker([59.745,1.600], {icon:image8})
 prison.bindPopup(message_prison)
-shelterMarkers_ecole.addLayer(prison)
+quatrième_couche.addLayer(prison)
 
 var image9 = L.icon({
     iconUrl:'aragog.png',
@@ -312,7 +376,7 @@ var image10 = L.icon({
   });
 var beauxbatons=L.marker([47.0134,3.3393], {icon:image10})
 beauxbatons.bindPopup(message_BB);
-shelterMarkers_ecole.addLayer(beauxbatons)
+quatrième_couche.addLayer(beauxbatons)
 
 var image11 = L.icon({
     iconUrl:'magyar_a_pointe.png',
@@ -345,8 +409,6 @@ var dragon_suede=L.marker([59.872,17.631], {icon:image13})
 dragon_suede.bindPopup(message_suedois)
 troisième_couche.addLayer(dragon_suede)
 
-/* nouvelle couche */
-var shelterMarkers_chaumiere = new L.FeatureGroup();
 
 
 var image14 = L.icon({
@@ -381,7 +443,7 @@ map.on('zoomend', function() {
             map.removeLayer(première_couche);
             map.removeLayer(deuxième_couche);
             map.removeLayer(troisième_couche);
-
+            map.removeLayer(quatrième_couche);
     }
     else {
       if (couche1==1){;
@@ -393,8 +455,11 @@ map.on('zoomend', function() {
       if (couche3==1){
             map.addLayer(troisième_couche);
       }
-        }
+      if (couche4==1){
+        map.addLayer(quatrième_couche);
+      }
 })
+
 
 
 var image16=L.icon({
@@ -419,20 +484,15 @@ poudlard_express.on('dragend', function (e) {
      console.log('bravo');
      couche3=1;
      couche2=0;
-
+     message_hagrid2.innerHTML="<div>J'ai appris que tu voulais faire BSPCT si tu avais pas été accepté à Poudlard. Si tu me trouves ces dragons dans leurs pays natal:</div>\
+     <p>-Un boutefeu chinois </p>\
+     <p>-Un suédois à museau court</p>\
+     <p>-Un magyar à pointe </p>\
+     <p>-Un vert gallois</p>\
+     <p>-Et mon cher Aragog qui est reparti dans le pays qui possède la plus grande barrière de corail au monde</p>\
+     <p> Je te fais membre du club de zoologie magique</p>";
    }
 });
-
-
-/*
-map.removeLayer(shelterMarkers_dragon);
-map.removeLayer(shelterMarkers_ecole);
-map.removeLayer(shelterMarkers_chaumiere);
-
-map.addLayer(shelterMarkers_dragon);
-map.addLayer(shelterMarkers_ecole);
-map.addLayer(shelterMarkers_chaumiere);
-*/
 
 
 let heure_debut=new Date();

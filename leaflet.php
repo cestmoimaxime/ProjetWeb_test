@@ -46,9 +46,10 @@
       </div>
     </div>
   </div>
-  
+    
     <div id='mot_de_passe'></div>
     <div id="time">00:00:00</div>
+    
     <div id="message_boutton_blaireau">
       <h1> Quelle est la hauteur de l'Etna et combien d'éruptions a-t-il connu au 20 ème siècle?</h1>
       <label>3360 mètres 80 éruptions<input id="bonne_reponse_blaireau" type="radio" name="news" value="1"></label>

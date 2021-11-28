@@ -67,6 +67,9 @@ var sol_aragog=document.getElementById('bonne_reponse_aragog');
 */
 var $mdp=document.getElementById('mot_de_passe');
 
+
+
+let info_blaireau=document.getElementById('info_blaireau');
 var sol_blaireau=document.getElementById('bonne_reponse_blaireau');
 var valid_blaireau=document.getElementById('valider_blaireau');
 let message_blaireau=document.getElementById('message_boutton_blaireau');
@@ -92,6 +95,7 @@ function fonction_blaireau(){
   if (sol_blaireau.checked && compteurb==0){
     $mdp.innerHTML+='em';
     compteurb+=1;
+    info_blaireau.innerHTML= 'Poufsouffle: Tu as réussi la question du baireau';
   }
 }
 

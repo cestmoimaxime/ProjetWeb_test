@@ -34,12 +34,12 @@
     <div id="overlay" class="overlay">
       <div id="popup" class="popup">
         <h2>Hagrid : <span id="btnClose" class="btnClose">&times;</span></h2>
-        <h4><p> Bonjour jeune sorcier ! J'ai l'honneur de t'annoncer que tu as été admis à l'école Poudlard. Mais avant de faire tes baggages et d'embarquer à bord du Poudlard Express, tu devras remplir une mission. Tu dois trouver les 4 emblèmes des 4 maisons de Poudlard. A chaque fois que tu trouveras un des animaux, tu devras répondre à une question. Attention, tu ne pourras pas accéder au Poudlard Express sans avoir répondu à TOUTES les questions (des réponses justes, n'est ce pas ?). Je te souhaite bon courage et reviens me voir plus tard !
+        <h4><p> Bonjour jeune sorcier ! J'ai l'honneur de t'annoncer que tu as été admis à l'école Poudlard. Mais avant de faire tes baggages et d'embarquer à bord du Poudlard Express, tu devras remplir une mission. Tu dois trouver les 4 emblèmes des 4 maisons de Poudlard. A chaque fois que tu trouveras un des animaux, tu devras répondre à une question. Attention, tu ne pourras pas accéder au Poudlard Express sans avoir répondu à TOUTES les questions (des réponses justes, n'est ce pas ?). Je te souhaite bon courage !
         </p>
-        <p>Gryffondor : lion + indice pour le trouver</p>
-        <p>Serdaigle : aigle + indice pour le trouver</p>
-        <p>Serpentard : serpent + indice pour le trouver</p>
-        <p>Poufsouffle : blaireau + indice pour le trouver</p>
+        <p id='info_lion'>Gryffondor : Il aime bien traîner du côté où son ancêtre s'est fait battre par Héraclès.</p>
+        <p id='info_aigle'>Serdaigle : L'aigle aprrécie particulièrement un parc à thème français.</p>
+        <p id='info_serpent'>Serpentard : Pour trouver le serpent, va voir du coté du grand Téton. </p>
+        <p id='info_blaireau'>Poufsouffle : Le blaireau se balade en plein milieu d'un volcan souvent actif d'Europe.</p>
         </h4>
       </div>
     </div>

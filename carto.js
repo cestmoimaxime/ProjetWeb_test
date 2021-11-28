@@ -16,6 +16,8 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_M
 
 
 
+
+
 var message_vert_gallois=document.getElementById('message_boutton_vert_gallois');
 var message_suedois=document.getElementById('message_boutton_suedois');
 var message_magyar=document.getElementById('message_boutton_magyar');
@@ -49,10 +51,37 @@ let message_blaireau=document.getElementById('message_boutton_blaireau');
 
 var nb_reponses_bonnes=0;
 
+
+var proposition_reponse=document.getElementById('proposition_reponse');
+var hagrid_valider=document.getElementById('hagrid_valider');
+
+var message_hagrid=document.getElementById('message_hagrid');
+
+/*
+function mess_hag(){
+  if (nb_reponses_bonnes==4){
+    return "<h1>Tu n'as pas encore répondu à toutes les questions </h1> " ; 
+  }
+  else {
+    return message_hagrid ;
+  }
+}
+*/
+hagrid_valider.addEventListener('click', reussir);
+
+function reussir(){
+  if (proposition_reponse.value=='Voldemort' || proposition_reponse.value=='voldemort'){
+   message_hagrid="C'est tout à fait ça";
+   map.removeLayer(première_couche);
+  }
+}
+
+
+
 var image1 = L.icon({
-  iconUrl:'poufsouffle_blaireau.jpg',
-  iconSize:[32,37],
-  iconAnchor:[16,37],
+  iconUrl:'poufsouffle_blaireau.png',
+  iconSize:[32*1.4,37*1.4],
+  iconAnchor:[16*1.4/2,37*1.4],
   popupAnchor:[-3,-76]
 });
 var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
@@ -69,7 +98,6 @@ function fonction_blaireau(){
     compteurb+=1;
     info_blaireau.innerHTML= 'Poufsouffle: Tu as réussi la question du baireau';
     nb_reponses_bonnes+=1;
-    console.log(nb_reponses_bonnes);
   }
 }
 
@@ -82,9 +110,9 @@ var sol_serpent=document.getElementById('bonne_reponse_serpent');
 var valid_serpent=document.getElementById('valider_serpent');
 
 var image2 = L.icon({
-  iconUrl:'serpentard_serpent.jpg',
-  iconSize:[32,37],
-  iconAnchor:[16,37],
+  iconUrl:'serpentard_serpent.png',
+  iconSize:[32*1.4,37*1.4,],
+  iconAnchor:[16*1.4/2,37*1.4],
   popupAnchor:[-3,-76]
 });
 var serpent = L.marker([43.8853,-110.5777], {icon: image2})
@@ -98,9 +126,7 @@ function fonction_serpent(){
     $mdp.innerHTML+='ort';
     compteurs+=1;
     nb_reponses_bonnes+=1;
-    info_serpent.innerHTML= 'Serpentard: Tu as réussi la question du serpent'
-    console.log(nb_reponses_bonnes);
-
+    info_serpent.innerHTML= 'Serpentard: Tu as réussi la question du serpent';
   }
 }
 
@@ -110,9 +136,9 @@ var valid_lion=document.getElementById('valider_lion');
 var sol_lion=document.getElementById('bonne_reponse_lion');
 
 var image4 = L.icon({
-  iconUrl:'gryffondor_lion.jpg',
-  iconSize:[32,37],
-  iconAnchor:[16,37],
+  iconUrl:'gryffondor_lion.png',
+  iconSize:[32*1.4,37*1.4],
+  iconAnchor:[16*1.4/2,37*1.4],
   popupAnchor:[-3,-76]
 });
 var compteurl=0;
@@ -125,8 +151,7 @@ function fonction_lion(){
     $mdp.innerHTML+='ld';
     compteurl+=1;
     nb_reponses_bonnes+=1;
-    info_lion.innerHTML= 'Gryffondor: Tu as réussi la question du lion'
-    console.log(nb_reponses_bonnes);
+    info_lion.innerHTML= 'Gryffondor: Tu as réussi la question du lion';
   }
 }
 
@@ -135,9 +160,9 @@ let message_aigle=document.getElementById('message_boutton_aigle');
 var valid_aigle=document.getElementById('valider_aigle');
 var sol_aigle=document.getElementById('bonne_reponse_aigle');
 var image3 = L.icon({
-  iconUrl:'serdaigle_aigle.jpg',
-  iconSize:[32,37],
-  iconAnchor:[16,37],
+  iconUrl:'serdaigle_aigle.png',
+  iconSize:[32*1.4,37*1.4],
+  iconAnchor:[16*1.4/2,37*1.4],
   popupAnchor:[-3,-76]
 });
 var aigle = L.marker([46.8906,-0.9289], {icon: image3})
@@ -150,7 +175,6 @@ function fonction_aigle(){
       compteura+=1;
       nb_reponses_bonnes+=1;
       info_aigle.innerHTML= "Serdaigle: Tu as réussi la question de l'aigle";
-      console.log(nb_reponses_bonnes);
     }
 }
 
@@ -209,8 +233,8 @@ var shelterMarkers_ecole = new L.FeatureGroup();
 
 var image5 = L.icon({
   iconUrl:'hagrid.png',
-  iconSize:[32,37],
-  iconAnchor:[16,37],
+  iconSize:[64,100],
+  iconAnchor:[32,100],
   popupAnchor:[-3,-76]
 });
 
@@ -328,11 +352,8 @@ var poudlard=L.marker([56.9745, -4.4125], {icon:image15})
 poudlard.bindPopup(messagePoudlard)
 première_couche.addLayer(poudlard)
 
-var mess_hag="Tu n'as pas encore répondu à toutes les questions "
-if (nb_reponses_bonnes==4){
-  mess_hag="Bravoooooooooooo";
-}
-var hagrid = L.marker([51.53319,-0.12418], {icon: image5}).bindPopup(mess_hag);
+
+var hagrid = L.marker([51.53319,-0.12418], {icon: image5}).bindPopup(message_hagrid);
 première_couche.addLayer(hagrid);
 
 map.on('zoomend', function() {

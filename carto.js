@@ -81,8 +81,8 @@ var image1 = L.icon({
 });
 var blaireau = L.marker([37.7508,14.9944], { icon: image1, draggable: true });
 blaireau.bindPopup(message_blaireau);
-var shelterMarkers = new L.FeatureGroup();
-shelterMarkers.addLayer(blaireau);
+var première_couche = new L.FeatureGroup();
+première_couche.addLayer(blaireau);
 valid_blaireau.addEventListener("click", fonction_blaireau);
 blaireau.on("click", rendreinvisibleb );
 function rendreinvisibleb(){
@@ -115,7 +115,7 @@ var image2 = L.icon({
 });
 var serpent = L.marker([43.8853,-110.5777], {icon: image2})
 serpent.bindPopup(message_serpent);
-shelterMarkers.addLayer(serpent);
+première_couche.addLayer(serpent);
 valid_serpent.addEventListener("click", fonction_serpent);
 serpent.on("click", rendreinvisibles );
 function rendreinvisibles(){
@@ -273,7 +273,7 @@ var image3 = L.icon({
 });
 var aigle = L.marker([46.8906,-0.9289], {icon: image3})
 aigle.bindPopup(messageaigle);
-shelterMarkers.addLayer(aigle);
+première_couche.addLayer(aigle);
 
 
 var image4 = L.icon({
@@ -284,7 +284,7 @@ var image4 = L.icon({
 });
 var lion = L.marker([37.8070,22.7066], {icon: image4})
 lion.bindPopup(messagelion);
-shelterMarkers.addLayer(lion);
+première_couche.addLayer(lion);
 
 
 /* nouvelle couche avec les 4 dragons et Aragog */
@@ -456,62 +456,31 @@ var image15 = L.icon({
   });
 var poudlard=L.marker([56.9745, -4.4125], {icon:image15})
 poudlard.bindPopup(messagePoudlard)
-shelterMarkers.addLayer(poudlard)
+première_couche.addLayer(poudlard)
 
 
-var hagrid = L.marker([51.53319,-0.12418], {icon: image5}).bindPopup('Question de Hagrid');
-shelterMarkers.addLayer(hagrid);
+var hagrid = L.marker([51.53319,-0.12418], {icon: image5}).bindPopup("Tu n'as pas encore répondu à toutes les question ");
+première_couche.addLayer(hagrid);
 
 map.on('zoomend', function() {
-    if (map.getZoom() <4){
-            map.removeLayer(shelterMarkers);
-            map.removeLayer(shelterMarkers_dragon);
-            map.removeLayer(shelterMarkers_ecole);
-            map.removeLayer(shelterMarkers_chaumiere);
+    if (map.getZoom() <8){
+            map.removeLayer(première_couche);
+
     }
     else {
-            map.addLayer(shelterMarkers);
-            map.addLayer(shelterMarkers_dragon);
-            map.addLayer(shelterMarkers_ecole);
-            map.addLayer(shelterMarkers_chaumiere);
+            map.addLayer(première_couche);
         }
-});
+})/*
+map.removeLayer(shelterMarkers_dragon);
+map.removeLayer(shelterMarkers_ecole);
+map.removeLayer(shelterMarkers_chaumiere);
 
-
-
-
-
-
-
-
-const markerGroup = L.featureGroup().addTo(map);
-/*
-$displayCoords.addEventListener('change', () => {
-    if ($displayCoords.checked) {
-        $coords.style.display = 'unset';
-    } else {
-        $coords.style.display = 'none';
-    }
-})
-
-
-marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-$formRecherche.addEventListener('submit', (event) => {
-    event.preventDefault();
-    let textValue = document.getElementById('txtRecherche').value;
-    fetch("http://api-adresse.data.gouv.fr/search/?q=" + textValue)
-    .then(response => response.json())
-    .then(response => {
-        markerGroup.clearLayers();
-        response.features.forEach( feature => {
-            let coords = feature.geometry.coordinates;
-            let marker = L.marker([coords[1], coords[0]]).addTo(markerGroup);
-            marker.bindPopup(feature.properties.label);
-        });
-        map.fitBounds(markerGroup.getBounds())
-    });
-});
+map.addLayer(shelterMarkers_dragon);
+map.addLayer(shelterMarkers_ecole);
+map.addLayer(shelterMarkers_chaumiere);
 */
+
+
 let heure_debut=new Date();
 
 let minuteur=document.getElementById('time');

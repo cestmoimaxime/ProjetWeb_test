@@ -245,8 +245,6 @@ else{
 }
 
 
-//$duree_joueur=$_COOKIE['temps_final'] ;
-
 
 $id=rand(0,100000);
 $sqljoueur = "INSERT INTO joueurs (id, nom, temps) 

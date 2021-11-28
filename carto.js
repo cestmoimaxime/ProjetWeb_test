@@ -602,3 +602,4 @@ setInterval( () => {
 }, 1000);
 
 
+//document.location.pathname=document.location.pathname.replace('leaflet.php','ecran_final.html');

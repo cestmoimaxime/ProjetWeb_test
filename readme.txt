@@ -3,7 +3,25 @@ Installations requises pour le bon fonctionnement du jeu :
 telecharger MAMP
 aller sur le lien github
 télécharger le dossier zip
-mettre le dossier préalablement dézippé dans C:\MAMP\htdocs 
+mettre le dossier préalablement dézippé dans C:\MAMP\htdocs et appeller le Projet_Web
+aller dans http://localhost/phpMyAdmin/ 
+si besoin creer un username='username' et un mot de passe ='motdepasse'
+aller dans database, ecrire 'harry_potter' dans database name
+cliquer sur create, cliquer sur create 
+cliquer sur le lien import en haut
+choisir le fichier icone.csv dans choisir un fichier
+cocher tout en bas de la page la ligne "The first line of the file contains the table column names (if this is unchecked, the first line will become part of the data)"
+la base de donnée icone est créé ! 
+
+
+dans la même base de donnée créer une nouvelle table;
+importer de la même maniere joueurs.csv
+
+Les bases de données sont prete à être utilisées!
+lancer le jeu en tapant http://localhost/Projet_Web/index.html
+
+Le jeu est lancé et je croise les doigts pour que ça marche
+
 
 
 

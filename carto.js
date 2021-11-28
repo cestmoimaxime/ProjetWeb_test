@@ -129,7 +129,7 @@ var couche1=1 ;
 var couche2=0;
 var couche3=0;
 var couche4=0;
-
+var couche5=0;
 function reussir(){
   if (proposition_reponse.value=='Voldemort' || proposition_reponse.value=='voldemort'){
    message_hagrid2.innerHTML="Voldemort vole un peu moins et est un peu plus mort en 2021... Le conducteur de train étant en méga GDB \
@@ -498,8 +498,17 @@ var image14 = L.icon({
     popupAnchor:[-3,-76]
   });
 var maison=L.marker([50.1027, -5.3892], {icon:image14})
-maison.bindpopup("C'est la fin de l'aventure, j'espère que )
+maison.addEventListener('click',function(){
+  var temps_final= minuteur;
+  //window.location.href="leaflet.php?temps_final=minuteur";
+  document.cookie="temps_final=minuteur";
+  console.log(temps_final);
+  message_hagrid2.innerHTML='<li id="menuElement"><a href="ecran_final.html">Finir le jeu </a></li>';
+  overlay.style.display='block';
+})
 cinquième_couche.addLayer(maison)
+
+
 
 
 
@@ -551,6 +560,10 @@ map.on('zoomend', function() {
       }
       if (couche4==1){
         map.addLayer(quatrième_couche);
+      }
+      if (couche5==1){
+        map.addLayer(cinquième_couche);
+
       }
     }
 }

@@ -243,6 +243,20 @@ if (isset($_GET['id'])){
 else{
   echo json_encode([$results[0], $results[1]]) ;
 }
+
+
+//$duree_joueur=$_COOKIE['temps_final'] ;
+
+
+$id=rand(0,100000);
+$sqljoueur = "INSERT INTO joueurs (id, nom, temps) 
+VALUES ($id ,'ok','01:00:00')";
+if ($link->query($sqljoueur) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sqljoueur . "<br>" . $link->error;
+}
+
  ?>
     <script src="carto.js"></script>
     <script src="popup.js"></script>

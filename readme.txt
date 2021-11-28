@@ -1,6 +1,34 @@
 Installations requises pour le bon fonctionnement du jeu :
 
+telecharger MAMP
+aller sur le lien github
+télécharger le dossier zip
+mettre le dossier préalablement dézippé dans C:\MAMP\htdocs 
 
+
+
+
+Ou se trouvent les icones?
+
+serdaigle au sud est de nantes, au puy du fou
+gryffondor au sud de la grece dans le peloponese (peninsule)
+poufsouffle au dessus de l'etna en Sicile
+serpentard au parc national du grand teton, au nord ouest du wyoming
+
+hagrid se situe alors a Londres
+poudlard se trouve en ecosse, au sud d'Inverness
+
+boutefeu chinois est à Taiwan
+magyar à pointes est à l'est du lac Balaton en hongrie
+suedois a crete à Upsala au nord de stockholm
+le vert gallois au pays de galles
+aragog en plein milieu de l'australie, au sud d'Alice Springs
+
+beauxbatons juste à coté de Nevers
+durmstrang à l'est de Perm en Russie, dans l'Oural
+Azkaban au sud est des iles Shetland, au nord de la mer du Nord
+
+La chaumiere au coquillage est sur la cote à l'extrémité tout au sud  de la peninsule au sud ouest de l'Angleterre, à coté d'Helston
 
 
 Réponses aux questions :

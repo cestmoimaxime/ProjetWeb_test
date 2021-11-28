@@ -204,7 +204,7 @@ form input {
     text-align: center;
     line-height: 100px;
     background-color: black;
-    background-image: url("gryffondor_lion.jpg");
+    background-image: url("gryffondor_lion.png");
     z-index: 100000;
     user-select: none;
 }

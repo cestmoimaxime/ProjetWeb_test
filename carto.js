@@ -24,7 +24,7 @@ var message_magyar=document.getElementById('message_boutton_magyar');
 var message_boutefeu=document.getElementById('message_boutton_boutefeu');
 var message_aragog=document.getElementById('message_boutton_aragog');
 var message_Durmstrang=document.getElementById('message_boutton_Durmstrang');
-var message_prison=document.getElementById('message_boutton_prison');
+var message_Azkaban=document.getElementById('message_boutton_prison');
 var message_BB=document.getElementById('message_boutton_BB');
 
 
@@ -33,6 +33,53 @@ var sol_suedois=document.getElementById('bonne_reponse_suedois');
 var sol_magyar=document.getElementById('bonne_reponse_magyar');
 var sol_boutefeu=document.getElementById('bonne_reponse_boutefeu');
 var sol_aragog=document.getElementById('bonne_reponse_aragog');
+var sol_Durmstrang=document.getElementById('bonne_reponse_Durmstrang');
+var valid_Durmstrang=document.getElementById('valider_Durmstrang');
+var sol_BB=document.getElementById('bonne_reponse_BB');
+var valid_BB=document.getElementById('valider_BB');
+var sol_Azkaban=document.getElementById('bonne_reponse_prison');
+var valid_Azkaban=document.getElementById('valider_prison');
+
+
+
+valid_Durmstrang.addEventListener("click", fonction_Durmstrang);
+valid_BB.addEventListener('click', fonction_BB);
+valid_Azkaban.addEventListener('click', fonction_Azkaban);
+
+
+var compteur_ecole=0;
+var compteurD=0;
+var compteurA=0;
+var compteurB=0;
+
+function fonction_Durmstrang(){
+  if (sol_Durmstrang.checked && compteurD==0){
+    compteur_ecole+=1;
+    compteurD+=1;
+    message_Durmstrang.innerHTML='Bravo à toi, le directeur est à Azkaban dans la mer du Nord' ;
+  } 
+}
+
+function fonction_BB(){
+  if (sol_BB.checked && compteurB==0){
+    compteur_ecole+=1;
+    compteurB+=1;
+    message_BB.innerHTML="Bravo à toi, j'inscrit ma signature alors" ;
+  } 
+}
+
+function fonction_Azkaban(){
+  if (sol_Azkaban.checked && compteurA==0){
+    compteur_ecole+=1;
+    compteurA+=1;
+    message_Azkaban.innerHTML="Bravo à toi, j'inscrit ma signature alors" ;
+  } 
+}
+
+
+
+
+
 
 
 var $mdp=document.getElementById('mot_de_passe');
@@ -387,7 +434,7 @@ var image8 = L.icon({
   });
 
 var prison=L.marker([59.745,1.600], {icon:image8})
-prison.bindPopup(message_prison)
+prison.bindPopup(message_Azkaban)
 quatrième_couche.addLayer(prison)
 
 var image9 = L.icon({
@@ -451,6 +498,7 @@ var image14 = L.icon({
     popupAnchor:[-3,-76]
   });
 var maison=L.marker([50.1027, -5.3892], {icon:image14})
+maison.bindpopup("C'est la fin de l'aventure, j'espère que )
 cinquième_couche.addLayer(maison)
 
 
@@ -470,6 +518,19 @@ deuxième_couche.addLayer(poudlard)
 
 var hagrid = L.marker([51.53319,-0.12418], {icon: image5}).bindPopup(mess_hag);
 première_couche.addLayer(hagrid);
+
+map.on('move',function(){
+  if (compteur_ecole==3){
+    message_hagrid2.innerHTML=" Tu peux enfin faire partie du club, Félicitations!! Mais attends ...\
+     Nous sommes déjà en juin ?? Tu as le droit d'aller te reposer à la chaumière aux coquillages en Cornouailles ";
+    overlay.style.display = 'block' ;
+    couche4=0;
+    couche5=1;
+
+  };
+})
+
+
 
 map.on('zoomend', function() {
     if (map.getZoom() <8){

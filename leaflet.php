@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Cartographie</title>
+    <title>Jeu Harry Potter</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -133,7 +133,7 @@
 </div>
 
 <div id="message_boutton_boutefeu">
-      <h1>Quelle est la seconde personne qui aide Harry Potter à résoudre l énigme de l oeuf dans "La coupe de feu" après Cédric Diggory ?</h1>
+      <h1>Quelle est la seconde personne qui aide Harry Potter à résoudre l'énigme de l'oeuf dans "La coupe de feu" après Cédric Diggory ?</h1>
       <label>Dumbledore<input type="radio" name="news" value="0"></label>
       <label>Hermione Granger<input type="radio" name="news" value="0"></label>
       <label>Mimi Geignarde<input id="bonne_reponse_boutefeu" type="radio" name="news" value="1"></label>
@@ -161,8 +161,8 @@
     <label>22<input type="radio" name="news" value="0"></label>
     <label>140<input type="radio" name="news" value="0"></label>
     <label>20<input type="radio" name="news" value="0"></label>
-    <label>24<input id="bonne_reponse_poudlard" type="radio" name="news" value="1"></label>
-    <button id="valider_poudlard" type="button">
+    <label>24<input id="bonne_reponse_Durmstrang" type="radio" name="news" value="1"></label>
+    <button id="valider_Durmstrang" type="button">
       Valider la réponse
     </button>
   </div>  
@@ -200,7 +200,7 @@
     <label>K ; L<input type="radio" name="news" value="0"></label>
     <label>R ; S<input type="radio" name="news" value="0"></label>
     <label>U ; Q<input type="radio" name="news" value="0"></label>
-    <label>H ; N<input id="bonne_reponse_aragog" type="radio" name="news" value="1"></label>
+    <label>H ; N<input id="bonne_reponse_prison" type="radio" name="news" value="1"></label>
     <button id="valider_prison" type="button">
       Valider la réponse
     </button>
